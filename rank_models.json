@@ -1,0 +1,141 @@
+{
+ "real_cond": 1,
+ "synth_cond": 2,
+ "prompts": [
+  "orig",
+  "none"
+ ],
+ "quant": "Q4_K_M",
+ "models": [
+  {
+   "name": "DeepSeek-Coder-6.7B",
+   "params_b": 6.7,
+   "files": {
+    "orig": "rerun_ds_q4.jsonl",
+    "none": "rerun_dsnone_q4.jsonl"
+   }
+  },
+  {
+   "name": "StarCoder2-7B",
+   "params_b": 7,
+   "files": {
+    "orig": "rerun_sc2_q4.jsonl",
+    "none": "rerun_sc2none_q4.jsonl"
+   }
+  },
+  {
+   "name": "CodeLlama-7B",
+   "params_b": 7,
+   "files": {
+    "orig": "rerun_cl_q4.jsonl",
+    "none": "rerun_clnone_q4.jsonl"
+   }
+  },
+  {
+   "name": "Qwen2.5-Coder-7B",
+   "params_b": 7,
+   "files": {
+    "orig": "rerun_q7_q4.jsonl",
+    "none": "rerun_q7none_q4.jsonl"
+   }
+  },
+  {
+   "name": "Qwen2.5-Coder-14B",
+   "params_b": 14,
+   "files": {
+    "orig": "rerun_q14_q4.jsonl",
+    "none": "rerun_q14none_q4.jsonl"
+   }
+  },
+  {
+   "name": "DeepSeek-Coder-1.3B",
+   "params_b": 1.3,
+   "gguf": "models/deepseek-coder-1.3b-base.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/DeepSeek_Coder_1.3B_orig.jsonl",
+    "none": "rank_out/DeepSeek_Coder_1.3B_none.jsonl"
+   }
+  },
+  {
+   "name": "Qwen2.5-Coder-1.5B",
+   "params_b": 1.5,
+   "gguf": "models/Qwen2.5-Coder-1.5B.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/Qwen2.5_Coder_1.5B_orig.jsonl",
+    "none": "rank_out/Qwen2.5_Coder_1.5B_none.jsonl"
+   }
+  },
+  {
+   "name": "Qwen2.5-Coder-3B",
+   "params_b": 3,
+   "gguf": "models/Qwen2.5-Coder-3B.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/Qwen2.5_Coder_3B_orig.jsonl",
+    "none": "rank_out/Qwen2.5_Coder_3B_none.jsonl"
+   }
+  },
+  {
+   "name": "StarCoder2-3B",
+   "params_b": 3,
+   "gguf": "models/starcoder2-3b-Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/StarCoder2_3B_orig.jsonl",
+    "none": "rank_out/StarCoder2_3B_none.jsonl"
+   }
+  },
+  {
+   "name": "StarCoder2-15B",
+   "params_b": 15,
+   "gguf": "models/starcoder2-15b-Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/StarCoder2_15B_orig.jsonl",
+    "none": "rank_out/StarCoder2_15B_none.jsonl"
+   }
+  },
+  {
+   "name": "CodeLlama-13B",
+   "params_b": 13,
+   "gguf": "models/codellama-13b.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/CodeLlama_13B_orig.jsonl",
+    "none": "rank_out/CodeLlama_13B_none.jsonl"
+   }
+  },
+  {
+   "name": "CodeGemma-7B",
+   "params_b": 7,
+   "gguf": "models/codegemma-7b.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/CodeGemma_7B_orig.jsonl",
+    "none": "rank_out/CodeGemma_7B_none.jsonl"
+   }
+  },
+  {
+   "name": "Granite-Code-3B-128k",
+   "params_b": 3,
+   "gguf": "models/granite-3b-code-base-128k.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/Granite_Code_3B_128k_orig.jsonl",
+    "none": "rank_out/Granite_Code_3B_128k_none.jsonl"
+   }
+  },
+  {
+   "name": "Granite-Code-8B-128k",
+   "params_b": 8,
+   "gguf": "models/granite-8b-code-base-128k.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/Granite_Code_8B_128k_orig.jsonl",
+    "none": "rank_out/Granite_Code_8B_128k_none.jsonl"
+   }
+  },
+  {
+   "name": "Yi-Coder-9B",
+   "params_b": 9,
+   "gguf": "models/Yi-Coder-9B.Q4_K_M.gguf",
+   "files": {
+    "orig": "rank_out/Yi_Coder_9B_orig.jsonl",
+    "none": "rank_out/Yi_Coder_9B_none.jsonl"
+   }
+  }
+ ]
+}
