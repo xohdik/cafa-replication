@@ -151,9 +151,7 @@ Three analyses were committed to this repository before the runs they govern:
 | 15-model ranking study | `PREREG_ranking.md` | `7a5416b6d108fe89955ca485630f06a5e6069673` (2026-10-12 22:07 +0800) |
 | Identifier-group check on the confirmation set | `PREREG_idgroups.md` | `f9ee130c3b40b10fd61ab2def6883d2840f650f8` (2026-10-13 09:13 +0800) |
 
-The plan of the confirmation analysis (`PREREG_confirm.txt`) was fixed before scoring only through the SHA-256 of
-`manifest_confirm.json`; the file itself was added to the repository later, so there is no commit that precedes the runs. The paper
-says so.
+`PREREG_confirm.txt` records, with self-written UTC timestamps, the manifest digest and the analysis plan (2026-10-10 10:32:37 UTC, before any model was scored) and, appended later, the complete-case rule (2026-10-11 04:18:18 UTC, after scoring, when the skipped program 671 was found; it depends on missingness only). The file entered the repository after the runs, so no commit precedes them; the timestamps are not independently verifiable. The paper says so.
 
 ## Licence and citation
 
