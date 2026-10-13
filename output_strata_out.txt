@@ -1,0 +1,36 @@
+Share of programs by expected-output stratum
+                zero     empty     multi    single
+real C1        0.021     0.000     0.321     0.658
+synth C2       0.219     0.000     0.000     0.781
+
+======================================================================================
+DeepSeek
+======================================================================================
+
+ real C1: main-run accuracy by expected-output stratum
+   zero    n=  10  acc 0.200 [0.000, 0.500]   | other-program acc 0.100
+   empty   n=   0  (too few)
+   multi   n= 154  acc 0.080 [0.041, 0.126]   | other-program acc 0.000
+   single  n= 316  acc 0.395 [0.341, 0.448]   | other-program acc 0.022
+
+ synthetic C2: main-run accuracy by expected-output stratum
+   zero    n= 105  acc 0.048 [0.010, 0.095]   | other-program acc 0.019
+   empty   n=   0  (too few)
+   multi   n=   0  (too few)
+   single  n= 375  acc 0.122 [0.090, 0.156]   | other-program acc 0.027
+
+======================================================================================
+Qwen
+======================================================================================
+
+ real C1: main-run accuracy by expected-output stratum
+   zero    n=  10  acc 0.200 [0.000, 0.500]   | other-program acc 0.100
+   empty   n=   0  (too few)
+   multi   n= 154  acc 0.082 [0.043, 0.128]   | other-program acc 0.000
+   single  n= 316  acc 0.380 [0.328, 0.434]   | other-program acc 0.019
+
+ synthetic C2: main-run accuracy by expected-output stratum
+   zero    n= 105  acc 0.235 [0.159, 0.317]   | other-program acc 0.057
+   empty   n=   0  (too few)
+   multi   n=   0  (too few)
+   single  n= 375  acc 0.323 [0.277, 0.371]   | other-program acc 0.051

@@ -1,0 +1,16 @@
+model,params_b,acc_real,acc_generator,rank_real,rank_generator
+Qwen2.5-Coder-14B,14,0.3433,0.3738,1,1
+Yi-Coder-9B,9,0.3323,0.2745,2,3
+StarCoder2-15B,15,0.3024,0.2498,3,5
+DeepSeek-Coder-6.7B,6.7,0.2972,0.1343,4,11
+Qwen2.5-Coder-7B,7,0.2855,0.2959,5,2
+CodeGemma-7B,7,0.2537,0.2693,6,4
+Granite-Code-8B-128k,8,0.2531,0.1395,7,10
+Qwen2.5-Coder-3B,3,0.2414,0.1869,8,7
+CodeLlama-13B,13,0.2408,0.2440,9,6
+StarCoder2-7B,7,0.2388,0.1311,10,12
+StarCoder2-3B,3,0.2167,0.1583,11,9
+Qwen2.5-Coder-1.5B,1.5,0.2128,0.1012,12,14
+CodeLlama-7B,7,0.2103,0.1791,13,8
+DeepSeek-Coder-1.3B,1.3,0.2005,0.1259,14,13
+Granite-Code-3B-128k,3,0.1849,0.0539,15,15

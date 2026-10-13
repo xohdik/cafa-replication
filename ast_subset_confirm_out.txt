@@ -1,0 +1,27 @@
+
+====================================================================================
+DeepSeek   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect -0.0003  [-0.0028, +0.0021]  p=0.8354
+PRIMARY (C1->C3 changed)           n= 541  AST effect -0.0009  [-0.0060, +0.0042]  p=0.7882
+   AST x syntheticity (DiD)                 +0.0092  [+0.0000, +0.0194]  p=0.0752
+   complement (unchanged), check   n=1000  AST effect +0.0000   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect -0.0015  [-0.0069, +0.0038]  p=0.64
+   AST x syntheticity (DiD)                 +0.0061  [-0.0046, +0.0168]  p=0.3086
+   complement (unchanged), check   n= 887  AST effect +0.0006   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     +0.0018  [-0.0111, +0.0148]  p=0.8826
+
+====================================================================================
+Qwen   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect -0.0006  [-0.0031, +0.0019]  p=0.6468
+PRIMARY (C1->C3 changed)           n= 541  AST effect +0.0009  [-0.0046, +0.0065]  p=0.8166
+   AST x syntheticity (DiD)                 +0.0018  [-0.0092, +0.0129]  p=0.822
+   complement (unchanged), check   n=1000  AST effect -0.0015   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect -0.0015  [-0.0073, +0.0042]  p=0.6502
+   AST x syntheticity (DiD)                 -0.0031  [-0.0145, +0.0084]  p=0.6454
+   complement (unchanged), check   n= 887  AST effect +0.0000   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     -0.0018  [-0.0166, +0.0129]  p=0.9068
+
+Note: subset selection depends only on the manifest (program text), not on model outputs,
+so it is not outcome-dependent; but it is a post-hoc analysis and is reported as exploratory.

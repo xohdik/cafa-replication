@@ -1,0 +1,54 @@
+=== cl
+== rerun_cl_q4.jsonl: 6168 records; status counts: {'ok': 6166, 'skipped_too_long': 2}
+
+category                       C1: n(%wrong) [%all]          C2: n(%wrong) [%all]
+empty                           0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+echoes_input                   86 (  7.1%) [  5.6%]           2 (  0.2%) [  0.1%]
+truncated_prefix                6 (  0.5%) [  0.4%]          13 (  1.0%) [  0.8%]
+extra_output                    5 (  0.4%) [  0.3%]           0 (  0.0%) [  0.0%]
+wrong_line_count              235 ( 19.3%) [ 15.2%]         240 ( 19.0%) [ 15.6%]
+format_variant                  3 (  0.2%) [  0.2%]           0 (  0.0%) [  0.0%]
+numeric_off_by_one            200 ( 16.4%) [ 13.0%]          20 (  1.6%) [  1.3%]
+numeric_wrong                 565 ( 46.4%) [ 36.7%]         990 ( 78.2%) [ 64.2%]
+other_value                   117 (  9.6%) [  7.6%]           1 (  0.1%) [  0.1%]
+TOTAL wrong                1217 of 1541 (acc 0.210)      1266 of 1542 (acc 0.179)
+
+paired programs n=1541: C1 right/C2 right=99  C1 right/C2 wrong=225  C1 wrong/C2 right=177  both wrong=1040
+
+wrote rerun_cl_q4_taxonomy.json (summary + 0 random wrong answers; contains no program code)
+=== q7
+== rerun_q7_q4.jsonl: 6168 records; status counts: {'ok': 6166, 'skipped_too_long': 2}
+
+category                       C1: n(%wrong) [%all]          C2: n(%wrong) [%all]
+empty                           0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+echoes_input                   61 (  5.5%) [  4.0%]          14 (  1.3%) [  0.9%]
+truncated_prefix                1 (  0.1%) [  0.1%]           0 (  0.0%) [  0.0%]
+extra_output                    2 (  0.2%) [  0.1%]           0 (  0.0%) [  0.0%]
+wrong_line_count              165 ( 15.0%) [ 10.7%]         162 ( 14.9%) [ 10.5%]
+format_variant                  6 (  0.5%) [  0.4%]           0 (  0.0%) [  0.0%]
+numeric_off_by_one            203 ( 18.4%) [ 13.2%]          23 (  2.1%) [  1.5%]
+numeric_wrong                 541 ( 49.1%) [ 35.1%]         887 ( 81.7%) [ 57.5%]
+other_value                   122 ( 11.1%) [  7.9%]           0 (  0.0%) [  0.0%]
+TOTAL wrong                1101 of 1541 (acc 0.286)      1086 of 1542 (acc 0.296)
+
+paired programs n=1541: C1 right/C2 right=215  C1 right/C2 wrong=225  C1 wrong/C2 right=241  both wrong=860
+
+wrote rerun_q7_q4_taxonomy.json (summary + 0 random wrong answers; contains no program code)
+=== q14
+== rerun_q14_q4.jsonl: 6168 records; status counts: {'ok': 6166, 'skipped_too_long': 2}
+
+category                       C1: n(%wrong) [%all]          C2: n(%wrong) [%all]
+empty                           0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+echoes_input                   64 (  6.3%) [  4.2%]          10 (  1.0%) [  0.6%]
+truncated_prefix                1 (  0.1%) [  0.1%]           9 (  0.9%) [  0.6%]
+extra_output                    4 (  0.4%) [  0.3%]           0 (  0.0%) [  0.0%]
+wrong_line_count              133 ( 13.1%) [  8.6%]         196 ( 20.3%) [ 12.7%]
+format_variant                  5 (  0.5%) [  0.3%]           0 (  0.0%) [  0.0%]
+numeric_off_by_one            169 ( 16.7%) [ 11.0%]           4 (  0.4%) [  0.3%]
+numeric_wrong                 520 ( 51.4%) [ 33.7%]         747 ( 77.3%) [ 48.4%]
+other_value                   116 ( 11.5%) [  7.5%]           0 (  0.0%) [  0.0%]
+TOTAL wrong                1012 of 1541 (acc 0.343)       966 of 1542 (acc 0.374)
+
+paired programs n=1541: C1 right/C2 right=297  C1 right/C2 wrong=232  C1 wrong/C2 right=279  both wrong=733
+
+wrote rerun_q14_q4_taxonomy.json (summary + 0 random wrong answers; contains no program code)

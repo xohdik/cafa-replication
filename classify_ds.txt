@@ -1,0 +1,18 @@
+== rerun_ds_q4.jsonl: 3084 records; status counts: {'ok': 3083, 'skipped_too_long': 1}
+== reproduction vs original run (responses_deepseek_confirm.json): 3077/3083 cells identical (0.9981); original accuracy 0.2151, rerun 0.2157
+
+category                       C1: n(%wrong) [%all]          C2: n(%wrong) [%all]
+empty                           0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+echoes_input                   61 (  5.6%) [  4.0%]         158 ( 11.8%) [ 10.2%]
+truncated_prefix               10 (  0.9%) [  0.6%]           6 (  0.4%) [  0.4%]
+extra_output                    0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+wrong_line_count              178 ( 16.4%) [ 11.6%]         335 ( 25.1%) [ 21.7%]
+format_variant                  7 (  0.6%) [  0.5%]           0 (  0.0%) [  0.0%]
+numeric_off_by_one            210 ( 19.4%) [ 13.6%]          23 (  1.7%) [  1.5%]
+numeric_wrong                 500 ( 46.2%) [ 32.4%]         812 ( 60.8%) [ 52.7%]
+other_value                   117 ( 10.8%) [  7.6%]           1 (  0.1%) [  0.1%]
+TOTAL wrong                1083 of 1541 (acc 0.297)      1335 of 1542 (acc 0.134)
+
+paired programs n=1541: C1 right/C2 right=90  C1 right/C2 wrong=368  C1 wrong/C2 right=117  both wrong=966
+
+wrote rerun_ds_q4_taxonomy.json (summary + 50 random wrong answers; contains no program code)

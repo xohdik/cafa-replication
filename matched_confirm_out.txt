@@ -1,0 +1,8 @@
+group                             n   DeepSeek                         Qwen                             model diff (first - second)
+ALL programs                   1541   -0.102 [-0.128,-0.078] p=0.0001   +0.004 [-0.022,+0.029] p=0.784   -0.106 [-0.128,-0.083] p=0.0001
+real single & synth single     1068   -0.154 [-0.187,-0.121] p=0.0001   -0.014 [-0.048,+0.020] p=0.423   -0.140 [-0.171,-0.110] p=0.0001
+real multi-line                 452   +0.013 [-0.013,+0.039] p=0.332   +0.031 [+0.001,+0.061] p=0.0462   -0.018 [-0.045,+0.009] p=0.205
+synth zero (real single)          0   too few programs
+
+Effects are signed accuracy differences (synthetic minus real); negative = synthetic is harder.
+Groups are exploratory subsets defined from program outputs in the manifest, not from model scores.

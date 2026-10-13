@@ -1,0 +1,19 @@
+1541 programs scored in conditions 1, 2, 5 and 6 under both demonstrations
+orig (answer 10): acc C1 0.210 C2 0.179 C5 0.204 C6 0.179
+   first line = 10: C1 11.0% C2 31.8% C5 10.4% C6 39.4%
+   first line = 8: C1 0.5% C2 0.7% C5 0.3% C6 1.7%
+     S|orig   -3.1 [-5.6, -0.6]
+     S|obf    -2.5 [-4.9, +0.0]
+     I|real   -0.6 [-1.8, +0.5]
+     I|synth  +0.0 [-1.4, +1.5]
+     IxS      +0.6 [-1.2, +2.5]
+orig8 (answer 8): acc C1 0.213 C2 0.187 C5 0.204 C6 0.189
+   first line = 10: C1 8.4% C2 21.3% C5 8.3% C6 19.8%
+   first line = 8: C1 0.8% C2 1.0% C5 0.7% C6 1.7%
+     S|orig   -2.6 [-5.1, -0.1]
+     S|obf    -1.6 [-4.0, +1.0]
+     I|real   -0.8 [-2.0, +0.4]
+     I|synth  +0.2 [-1.2, +1.6]
+     IxS      +1.0 [-0.8, +2.9]
+  orig8 minus orig, S|orig: +0.5 [-0.5, +1.6]
+  orig8 minus orig, IxS:    +0.4 [-1.0, +1.8]

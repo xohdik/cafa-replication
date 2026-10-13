@@ -1,0 +1,106 @@
+programs with C2 wrong and C6 right: 74 of 480
+
+==============================================================================
+program 458   C2: WRONG   C6: OK
+==============================================================================
+n = int(input())
+result = 0
+if n >= -4:
+    result += 5
+print(result + 1)
+print(result + 2)
+print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '6\n7\n5'
+--- C2 predicted: '1 2 3'
+--- C6 predicted: '6\n7\n5'
+
+==============================================================================
+program 167   C2: WRONG   C6: OK
+==============================================================================
+n = int(input())
+result = 0
+for i_0 in range(n):
+    if n >= 2:
+        result += 5
+    _pad0 = 64
+    _pad1 = 94
+    print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '5\n10\n15'
+--- C2 predicted: '15'
+--- C6 predicted: '5\n10\n15'
+
+==============================================================================
+program 471   C2: WRONG   C6: OK
+==============================================================================
+n = int(input())
+result = 0
+if n < 5:
+    result += 4
+_pad0 = 82
+_pad1 = 11
+_pad2 = 86
+_pad3 = 45
+_pad4 = 24
+_pad5 = 68
+_pad6 = 95
+_pad7 = 24
+_pad8 = 61
+_pad9 = 48
+print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '4'
+--- C2 predicted: '10'
+--- C6 predicted: '4'
+
+==============================================================================
+program 483   C2: WRONG   C6: OK
+==============================================================================
+import contextlib
+n = int(input())
+result = 0
+with contextlib.nullcontext():
+    result += 3
+print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '3'
+--- C2 predicted: '6'
+--- C6 predicted: '3'
+
+==============================================================================
+program 431   C2: WRONG   C6: OK
+==============================================================================
+import contextlib
+n = int(input())
+result = 0
+with contextlib.nullcontext():
+    result += 3
+    _pad0 = 13
+    _pad1 = 81
+print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '3'
+--- C2 predicted: '16'
+--- C6 predicted: '3'
+
+==============================================================================
+program 389   C2: WRONG   C6: OK
+==============================================================================
+import contextlib
+n = int(input())
+result = 0
+with contextlib.nullcontext():
+    result += 6
+print(result)
+--- stdin: '3\n1 2 3'
+--- expected : '6'
+--- C2 predicted: '12'
+--- C6 predicted: '6'
+
+re-run reproduced the C2 failure on 60 of 60 programs
+failure types for C2 (what the model actually produced):
+  single number, wrong value          50  (83%)
+  fewer lines than expected            7  (12%)
+  same line count, wrong content       2  (3%)
+  more lines than expected             1  (2%)

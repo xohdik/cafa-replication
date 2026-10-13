@@ -1,0 +1,91 @@
+==============================================================================
+sample_index 66 problem p03129
+--- condition 1  stdin=['3 2\n']
+N, K = map(int, input().split())
+if N + 1 >= 2 * K:
+    print('YES')
+else:
+    print('NO')
+--- condition 2  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+n = int(input())
+result = 0
+if n >= -9:
+    result += 1
+_pad0 = 24
+print(result)
+--- condition 5  stdin=['3 2\n']
+var_0, var_1 = map(int, input().split())
+if var_0 + 1 >= 2 * var_1:
+    print('YES')
+else:
+    print('NO')
+--- condition 6  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+var_0 = int(input())
+var_1 = 0
+if var_0 >= -9:
+    var_1 += 1
+var_2 = 24
+print(var_1)
+--- expected (cond 1): 'YES\n'  DeepSeek cond 1: 'YES\n'
+--- expected (cond 2): '1\n'  DeepSeek cond 2: '3\n'
+==============================================================================
+sample_index 336 problem p00019
+--- condition 1  stdin=['5\n']
+n = int(input())
+base = 1
+for i in range(n):
+    base *= i + 1
+print(base)
+--- condition 2  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+n = int(input())
+result = 0
+if n < 7:
+    result += 9
+_pad0 = 29
+print(result)
+--- condition 5  stdin=['5\n']
+var_0 = int(input())
+var_1 = 1
+for var_2 in range(var_0):
+    var_1 *= var_2 + 1
+print(var_1)
+--- condition 6  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+var_0 = int(input())
+var_1 = 0
+if var_0 < 7:
+    var_1 += 9
+var_2 = 29
+print(var_1)
+--- expected (cond 1): '120\n'  DeepSeek cond 1: '120\n'
+--- expected (cond 2): '9\n'  DeepSeek cond 2: '10\n'
+==============================================================================
+sample_index 647 problem p03227
+--- condition 1  stdin=['abc\n']
+S = input().rstrip('\n')
+if len(S) == 2:
+    print(S)
+else:
+    print(S[::-1])
+--- condition 2  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+n = int(input())
+result = 0
+if n > -1:
+    result += 2
+_pad0 = 42
+print(result)
+--- condition 5  stdin=['abc\n']
+var_0 = input().rstrip('\n')
+if len(var_0) == 2:
+    print(var_0)
+else:
+    print(var_0[::-1])
+--- condition 6  stdin=['3\n1 2 3\n', '1\n5\n', '4\n-2 0 7 3\n']
+var_0 = int(input())
+var_1 = 0
+if var_0 > -1:
+    var_1 += 2
+var_2 = 42
+print(var_1)
+--- expected (cond 1): 'cba\n'  DeepSeek cond 1: 'cba\n'
+--- expected (cond 2): '2\n'  DeepSeek cond 2: '6\n'
+53 candidates

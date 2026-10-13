@@ -1,0 +1,19 @@
+{
+  "n_samples": 500,
+  "elapsed_seconds": 351.4606189727783,
+  "n_no_test_cases": 0,
+  "n_no_shuffle_possible": 222,
+  "n_shuffle_attempted_and_testable": 272,
+  "n_verified_ok": 272,
+  "n_corrupted": 0,
+  "n_original_broken_on_test": 6,
+  "n_error": 0,
+  "corruption_rate": 0.0,
+  "distance_when_verified": {
+    "mean": 0.04471169087359343,
+    "median": 0.017523747133966594,
+    "max": 0.4111295681063123,
+    "n": 272
+  },
+  "corrupted_examples": []
+}

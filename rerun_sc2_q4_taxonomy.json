@@ -1,0 +1,383 @@
+{
+ "summary": {
+  "1": {
+   "n": 1541,
+   "wrong": 1173,
+   "acc": 0.23880597014925375,
+   "cats": {
+    "wrong_line_count": 280,
+    "numeric_wrong": 505,
+    "echoes_input": 79,
+    "numeric_off_by_one": 181,
+    "other_value": 104,
+    "format_variant": 4,
+    "extra_output": 18,
+    "truncated_prefix": 2
+   }
+  },
+  "2": {
+   "n": 1542,
+   "wrong": 1340,
+   "acc": 0.13099870298313876,
+   "cats": {
+    "numeric_wrong": 1160,
+    "wrong_line_count": 134,
+    "numeric_off_by_one": 44,
+    "extra_output": 1,
+    "truncated_prefix": 1
+   }
+  }
+ },
+ "examples": [
+  {
+   "cond": 1,
+   "sample": 355,
+   "category": "numeric_off_by_one",
+   "predicted": "5",
+   "expected": "4"
+  },
+  {
+   "cond": 1,
+   "sample": 757,
+   "category": "other_value",
+   "predicted": "e**r*",
+   "expected": "*rr*r"
+  },
+  {
+   "cond": 1,
+   "sample": 1498,
+   "category": "echoes_input",
+   "predicted": "atcoder",
+   "expected": "atcoderb"
+  },
+  {
+   "cond": 1,
+   "sample": 363,
+   "category": "numeric_off_by_one",
+   "predicted": "0.75",
+   "expected": "0.612"
+  },
+  {
+   "cond": 1,
+   "sample": 1526,
+   "category": "numeric_wrong",
+   "predicted": "6",
+   "expected": "3"
+  },
+  {
+   "cond": 1,
+   "sample": 184,
+   "category": "echoes_input",
+   "predicted": "2",
+   "expected": "1"
+  },
+  {
+   "cond": 1,
+   "sample": 1606,
+   "category": "wrong_line_count",
+   "predicted": "2\n1 1\n2 1",
+   "expected": "1\n-3 2"
+  },
+  {
+   "cond": 1,
+   "sample": 1308,
+   "category": "wrong_line_count",
+   "predicted": "2\n1\n0\n1\n0\n0\n/Code/CodeRecords/2537/60799/272883.py\ndef func(n):\n    if n==1:\n        return 1\n    elif n==2:\n        ret",
+   "expected": "3\n1\n5"
+  },
+  {
+   "cond": 1,
+   "sample": 1506,
+   "category": "numeric_wrong",
+   "predicted": "2\n3\n4\n5\n1",
+   "expected": "4\n1\n2\n5\n3"
+  },
+  {
+   "cond": 1,
+   "sample": 1005,
+   "category": "numeric_wrong",
+   "predicted": "2\n3\n4\n5\n6\n7",
+   "expected": "1\n2\n2\n3\n18\n44"
+  },
+  {
+   "cond": 1,
+   "sample": 1576,
+   "category": "wrong_line_count",
+   "predicted": "2\nNA\n0",
+   "expected": "4\nNA"
+  },
+  {
+   "cond": 1,
+   "sample": 504,
+   "category": "numeric_off_by_one",
+   "predicted": "1.5",
+   "expected": "1.2000000000000002"
+  },
+  {
+   "cond": 1,
+   "sample": 1494,
+   "category": "wrong_line_count",
+   "predicted": "13\n13\n13\n13\n13\n/Code/CodeRecords/2532/60799/272867.py\ndef func(n,m):\n    if n==1:\n        return m\n    else:\n        ret",
+   "expected": "31\n31\n27\n23\n23"
+  },
+  {
+   "cond": 1,
+   "sample": 917,
+   "category": "numeric_wrong",
+   "predicted": "24 12\n14 14\n18 18",
+   "expected": "19 8\n20 0\n15 14"
+  },
+  {
+   "cond": 1,
+   "sample": 5,
+   "category": "echoes_input",
+   "predicted": "10",
+   "expected": "8"
+  },
+  {
+   "cond": 1,
+   "sample": 1101,
+   "category": "echoes_input",
+   "predicted": "0 0\n0 0\n0 0",
+   "expected": "6 5\n1 0\n2 1"
+  },
+  {
+   "cond": 1,
+   "sample": 187,
+   "category": "echoes_input",
+   "predicted": "2\n3\n4",
+   "expected": "1\n3\n4"
+  },
+  {
+   "cond": 1,
+   "sample": 851,
+   "category": "wrong_line_count",
+   "predicted": "-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1\n-1 -1",
+   "expected": "0 9 14 16\n0 9\n0 -1\n0 2\n0 0\n0 2 4 6\n0 -1\n0 -1 4\n0 20 40 60"
+  },
+  {
+   "cond": 1,
+   "sample": 847,
+   "category": "numeric_wrong",
+   "predicted": "17",
+   "expected": "14"
+  },
+  {
+   "cond": 1,
+   "sample": 994,
+   "category": "numeric_off_by_one",
+   "predicted": "1",
+   "expected": "0"
+  },
+  {
+   "cond": 1,
+   "sample": 1612,
+   "category": "numeric_wrong",
+   "predicted": "10",
+   "expected": "12800"
+  },
+  {
+   "cond": 1,
+   "sample": 1292,
+   "category": "numeric_wrong",
+   "predicted": "2",
+   "expected": "8"
+  },
+  {
+   "cond": 1,
+   "sample": 1023,
+   "category": "numeric_wrong",
+   "predicted": "10",
+   "expected": "12"
+  },
+  {
+   "cond": 1,
+   "sample": 344,
+   "category": "numeric_off_by_one",
+   "predicted": "4",
+   "expected": "3"
+  },
+  {
+   "cond": 1,
+   "sample": 1478,
+   "category": "echoes_input",
+   "predicted": "2",
+   "expected": "6"
+  },
+  {
+   "cond": 2,
+   "sample": 763,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "45"
+  },
+  {
+   "cond": 2,
+   "sample": 255,
+   "category": "numeric_wrong",
+   "predicted": "15",
+   "expected": "45"
+  },
+  {
+   "cond": 2,
+   "sample": 886,
+   "category": "numeric_wrong",
+   "predicted": "15\n15\n15",
+   "expected": "18\n36\n54"
+  },
+  {
+   "cond": 2,
+   "sample": 1292,
+   "category": "numeric_wrong",
+   "predicted": "10",
+   "expected": "57"
+  },
+  {
+   "cond": 2,
+   "sample": 1220,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "27"
+  },
+  {
+   "cond": 2,
+   "sample": 1569,
+   "category": "numeric_wrong",
+   "predicted": "6\n6\n6",
+   "expected": "2\n4\n6"
+  },
+  {
+   "cond": 2,
+   "sample": 204,
+   "category": "numeric_wrong",
+   "predicted": "24",
+   "expected": "27"
+  },
+  {
+   "cond": 2,
+   "sample": 336,
+   "category": "numeric_wrong",
+   "predicted": "12",
+   "expected": "9"
+  },
+  {
+   "cond": 2,
+   "sample": 671,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "9"
+  },
+  {
+   "cond": 2,
+   "sample": 85,
+   "category": "numeric_wrong",
+   "predicted": "12\n12\n12",
+   "expected": "9\n18\n27"
+  },
+  {
+   "cond": 2,
+   "sample": 570,
+   "category": "wrong_line_count",
+   "predicted": "10",
+   "expected": "3807\n7614\n11421"
+  },
+  {
+   "cond": 2,
+   "sample": 667,
+   "category": "numeric_wrong",
+   "predicted": "14",
+   "expected": "27"
+  },
+  {
+   "cond": 2,
+   "sample": 109,
+   "category": "numeric_wrong",
+   "predicted": "14",
+   "expected": "9"
+  },
+  {
+   "cond": 2,
+   "sample": 1625,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "39"
+  },
+  {
+   "cond": 2,
+   "sample": 1116,
+   "category": "wrong_line_count",
+   "predicted": "11",
+   "expected": "5\n10\n15"
+  },
+  {
+   "cond": 2,
+   "sample": 810,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "9"
+  },
+  {
+   "cond": 2,
+   "sample": 1562,
+   "category": "numeric_wrong",
+   "predicted": "10\n10\n10",
+   "expected": "13\n26\n39"
+  },
+  {
+   "cond": 2,
+   "sample": 566,
+   "category": "numeric_wrong",
+   "predicted": "15",
+   "expected": "11"
+  },
+  {
+   "cond": 2,
+   "sample": 390,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "30"
+  },
+  {
+   "cond": 2,
+   "sample": 1264,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "270"
+  },
+  {
+   "cond": 2,
+   "sample": 1140,
+   "category": "numeric_wrong",
+   "predicted": "12",
+   "expected": "3"
+  },
+  {
+   "cond": 2,
+   "sample": 370,
+   "category": "numeric_wrong",
+   "predicted": "10",
+   "expected": "7"
+  },
+  {
+   "cond": 2,
+   "sample": 1628,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "18"
+  },
+  {
+   "cond": 2,
+   "sample": 1516,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "48"
+  },
+  {
+   "cond": 2,
+   "sample": 217,
+   "category": "numeric_wrong",
+   "predicted": "100",
+   "expected": "102"
+  }
+ ]
+}

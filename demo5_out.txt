@@ -1,0 +1,48 @@
+
+== DS: 1541 programs scored in every prompt variant
+DS orig      acc C1 0.297 C2 0.134 C5 0.270 C6 0.228
+     S|orig-names  -0.163 [-0.189, -0.136]
+     S|obf-names   -0.042 [-0.070, -0.014]
+     I|real        -0.027 [-0.042, -0.013]
+     I|synth       +0.094 [+0.075, +0.114]
+     IxS           +0.121 [+0.097, +0.145]
+DS reverse   acc C1 0.299 C2 0.149 C5 0.267 C6 0.259
+     S|orig-names  -0.151 [-0.177, -0.124]
+     S|obf-names   -0.008 [-0.035, +0.019]
+     I|real        -0.032 [-0.047, -0.018]
+     I|synth       +0.110 [+0.090, +0.130]
+     IxS           +0.143 [+0.118, +0.167]
+DS none      acc C1 0.231 C2 0.230 C5 0.199 C6 0.225
+     S|orig-names  -0.001 [-0.027, +0.025]
+     S|obf-names   +0.026 [+0.001, +0.051]
+     I|real        -0.032 [-0.049, -0.015]
+     I|synth       -0.005 [-0.021, +0.012]
+     IxS           +0.027 [+0.004, +0.051]
+  DS reverse minus orig, S|orig-names +0.012 [-0.007, +0.031]
+  DS reverse minus orig, IxS          +0.021 [+0.002, +0.041]
+  DS none minus orig, S|orig-names +0.162 [+0.137, +0.186]
+  DS none minus orig, IxS          -0.094 [-0.122, -0.066]
+
+== SC2: 8 programs scored in every prompt variant
+SC2 orig     acc C1 0.375 C2 0.250 C5 0.250 C6 0.125
+     S|orig-names  -0.125 [-0.375, +0.000]
+     S|obf-names   -0.125 [-0.375, +0.000]
+     I|real        -0.125 [-0.375, +0.000]
+     I|synth       -0.125 [-0.375, +0.000]
+     IxS           +0.000 [+0.000, +0.000]
+SC2 reverse  acc C1 0.250 C2 0.250 C5 0.250 C6 0.125
+     S|orig-names  +0.000 [-0.375, +0.375]
+     S|obf-names   -0.125 [-0.375, +0.000]
+     I|real        +0.000 [+0.000, +0.000]
+     I|synth       -0.125 [-0.375, +0.000]
+     IxS           -0.125 [-0.375, +0.000]
+SC2 none     acc C1 0.125 C2 0.125 C5 0.250 C6 0.250
+     S|orig-names  +0.000 [-0.375, +0.375]
+     S|obf-names   +0.000 [-0.375, +0.375]
+     I|real        +0.125 [+0.000, +0.375]
+     I|synth       +0.125 [+0.000, +0.375]
+     IxS           +0.000 [-0.375, +0.375]
+  SC2 reverse minus orig, S|orig-names +0.125 [+0.000, +0.375]
+  SC2 reverse minus orig, IxS          -0.125 [-0.375, +0.000]
+  SC2 none minus orig, S|orig-names +0.125 [+0.000, +0.375]
+  SC2 none minus orig, IxS          +0.000 [-0.375, +0.375]

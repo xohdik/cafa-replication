@@ -1,0 +1,19 @@
+{
+ "n5": {
+  "programs": 1542,
+  "ok": 1542,
+  "failed": 0,
+  "not_starting_with_n_input": 83
+ },
+ "nopad": {
+  "programs": 1542,
+  "had_pads": 1375,
+  "no_pads": 167,
+  "verified": 1375,
+  "failed": 0,
+  "lines_before": 49142,
+  "lines_after": 22807,
+  "mean_lines_before": 31.87,
+  "mean_lines_after": 14.79
+ }
+}

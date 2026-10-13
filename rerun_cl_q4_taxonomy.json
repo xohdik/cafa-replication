@@ -1,0 +1,33 @@
+{
+ "summary": {
+  "1": {
+   "n": 1541,
+   "wrong": 1217,
+   "acc": 0.21025308241401686,
+   "cats": {
+    "wrong_line_count": 235,
+    "numeric_off_by_one": 200,
+    "other_value": 117,
+    "numeric_wrong": 565,
+    "echoes_input": 86,
+    "extra_output": 5,
+    "format_variant": 3,
+    "truncated_prefix": 6
+   }
+  },
+  "2": {
+   "n": 1542,
+   "wrong": 1266,
+   "acc": 0.17898832684824906,
+   "cats": {
+    "numeric_wrong": 990,
+    "wrong_line_count": 240,
+    "numeric_off_by_one": 20,
+    "truncated_prefix": 13,
+    "echoes_input": 2,
+    "other_value": 1
+   }
+  }
+ },
+ "examples": []
+}

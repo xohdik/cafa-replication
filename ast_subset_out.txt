@@ -1,0 +1,31 @@
+/data/workzone/capa/ast_subset_effects.py:103: RuntimeWarning: Mean of empty slice
+  print(f"{'   complement (unchanged), check':34s} n={int(comp.sum()):4d}  AST effect {v_all[comp].mean():+.4f}"
+/home/tundecode/miniconda3/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+====================================================================================
+DeepSeek   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [474, 431, 141, 430]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect +0.0071  [-0.0064, +0.0207]  p=0.297
+PRIMARY (C1->C3 changed)           n= 474  AST effect +0.0083  [-0.0051, +0.0220]  p=0.2368
+   AST x syntheticity (DiD)                 +0.0207  [-0.0060, +0.0485]  p=0.1302
+   complement (unchanged), check   n=   6  AST effect -0.0833   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 480  AST effect +0.0071  [-0.0064, +0.0207]  p=0.2992
+   AST x syntheticity (DiD)                 +0.0184  [-0.0080, +0.0458]  p=0.1796
+   complement (unchanged), check   n=   0  AST effect +nan   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 474  effect     -0.0070  [-0.0218, +0.0077]  p=0.3398
+
+====================================================================================
+Qwen   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [474, 431, 141, 430]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect -0.0023  [-0.0161, +0.0118]  p=0.7578
+PRIMARY (C1->C3 changed)           n= 474  AST effect -0.0023  [-0.0167, +0.0121]  p=0.7606
+   AST x syntheticity (DiD)                 -0.0032  [-0.0309, +0.0257]  p=0.8296
+   complement (unchanged), check   n=   6  AST effect +0.0000   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 480  AST effect -0.0023  [-0.0163, +0.0118]  p=0.7572
+   AST x syntheticity (DiD)                 -0.0031  [-0.0316, +0.0254]  p=0.8348
+   complement (unchanged), check   n=   0  AST effect +nan   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 474  effect     +0.0049  [-0.0127, +0.0232]  p=0.5844
+
+Note: subset selection depends only on the manifest (program text), not on model outputs,
+so it is not outcome-dependent; but it is a post-hoc analysis and is reported as exploratory.

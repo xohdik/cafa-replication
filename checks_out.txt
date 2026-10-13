@@ -1,0 +1,66 @@
+== manifest manifest_confirm.json: 1542 samples, 1542 distinct problems
+
+== problem-id audit (distinct problem ids per file; overlap with the confirmation set)
+  manifest.json                          n_problems=  437  overlap_with_confirm=0
+  manifest_confirm.json                  n_problems= 1542  overlap_with_confirm=1542
+  manifest_ds.json                       n_problems=    0  overlap_with_confirm=0
+  manifest_local.json                    n_problems=    0  overlap_with_confirm=0
+  manifest_shape.json                    n_problems=  437  overlap_with_confirm=0
+  manifest_smoke.json                    n_problems=    5  overlap_with_confirm=0
+  manifest_v2.json                       n_problems=  437  overlap_with_confirm=0
+  pairs_confirm.json                     n_problems= 1630  overlap_with_confirm=1542
+  rq4_confirm.jsonl                      n_problems= 1630  overlap_with_confirm=1542
+  rq4_samples.jsonl                      n_problems=    0  overlap_with_confirm=0
+  rq4_samples_dated.jsonl                n_problems=  456  overlap_with_confirm=0
+  rq4_samples_dated_v2.jsonl             n_problems=  456  overlap_with_confirm=0
+  rq4_samples_verified.jsonl             n_problems=  456  overlap_with_confirm=0
+  rq4_samples_verified_v2.jsonl          n_problems=  456  overlap_with_confirm=0
+
+== responses_deepseek_confirm.json: complete cases = 1541 of 1542; dropped indices: [671]
+   condition means C1..C8: 0.297 0.133 0.299 0.136 0.271 0.228 0.267 0.228
+
+== seven terms (signed; program-level bootstrap, Holm over 7)
+   I    +0.032 [+0.020,+0.044]  p=0.0002  holm=0.0014
+   A    -0.000 [-0.003,+0.002]  p=0.8355  holm=1.0000
+   S    -0.102 [-0.128,-0.078]  p=0.0002  holm=0.0014
+   IA   -0.005 [-0.009,+0.000]  p=0.0708  holm=0.2832
+   IS   +0.123 [+0.099,+0.146]  p=0.0002  holm=0.0014
+   AS   +0.003 [-0.002,+0.007]  p=0.3324  holm=0.9971
+   IAS  +0.003 [-0.006,+0.012]  p=0.6165  holm=1.0000
+
+== four simple effects (Table 7 definition, A averaged)
+   I|real         -0.029 [-0.043,-0.015]
+   I|synth        +0.094 [+0.075,+0.113]
+   S|orig-names   -0.164 [-0.190,-0.137]
+   S|obf-names    -0.041 [-0.069,-0.014]
+   ...executed 0/1541 programs (0s)
+   ...executed 300/1541 programs (12s)
+   ...executed 600/1541 programs (30s)
+   ...executed 900/1541 programs (44s)
+   ...executed 1200/1541 programs (56s)
+   ...executed 1500/1541 programs (70s)
+
+== expected-output length (lines): real C1 / synthetic C2
+   real       1 line: 0.707   2-3: 0.149   4+: 0.145   (n=1541)
+   synthetic  1 line: 0.707   2-3: 0.293   4+: 0.000   (n=1541)
+
+== I x S inside strata (exploratory)
+   ALL                      n= 1541  IxS +0.123 [+0.099,+0.146]  C1..C8 acc: 0.30 0.13 0.30 0.14 0.27 0.23 0.27 0.23
+   real single-line         n= 1089  IxS +0.153 [+0.123,+0.185]  C1..C8 acc: 0.40 0.17 0.40 0.18 0.36 0.29 0.36 0.29
+   real multi-line          n=  452  IxS +0.049 [+0.020,+0.077]  C1..C8 acc: 0.05 0.04 0.05 0.04 0.05 0.09 0.05 0.09
+   synthetic single-line    n= 1089  IxS +0.153 [+0.123,+0.185]  C1..C8 acc: 0.40 0.17 0.40 0.18 0.36 0.29 0.36 0.29
+   synthetic multi-line     n=  452  IxS +0.049 [+0.020,+0.077]  C1..C8 acc: 0.05 0.04 0.05 0.04 0.05 0.09 0.05 0.09
+   both multi-line          n=  452  IxS +0.049 [+0.020,+0.077]  C1..C8 acc: 0.05 0.04 0.05 0.04 0.05 0.09 0.05 0.09
+   both single-line         n= 1089  IxS +0.153 [+0.123,+0.185]  C1..C8 acc: 0.40 0.17 0.40 0.18 0.36 0.29 0.36 0.29
+
+== popularity (Python submissions per problem, CodeNet metadata); programs with a count: 1541/1541
+   count quantiles (all Python rows) 10/50/90%: [11, 347, 4699]
+   Spearman(log10 count, real acc, orig names            ) rho=+0.303 p=nan
+   Spearman(log10 count, synthetic acc, orig names       ) rho=+0.169 p=nan
+   Spearman(log10 count, per-program I x S contrast      ) rho=+0.109 p=nan
+   Spearman(log10 count, S gap (synth-real), orig names  ) rho=-0.165 p=nan
+   tertiles of popularity (low/mid/high); I x S per tertile:
+   low   n= 517 count 2-88  real 0.143  synth 0.073  IxS +0.070 [+0.038,+0.102]
+   mid   n= 510 count 89-1490  real 0.275  synth 0.123  IxS +0.119 [+0.081,+0.157]
+   high  n= 514 count 1495-20438  real 0.477  synth 0.208  IxS +0.180 [+0.130,+0.231]
+   (exploratory; one program per problem so no clustering, but popularity is only a proxy for training-data exposure)

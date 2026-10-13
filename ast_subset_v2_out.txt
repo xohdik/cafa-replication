@@ -1,0 +1,27 @@
+
+====================================================================================
+DeepSeek   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [141, 53, 141, 53]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect +0.0036  [-0.0010, +0.0083]  p=0.138
+PRIMARY (C1->C3 changed)           n= 141  AST effect +0.0089  [+0.0000, +0.0177]  p=0.0614
+   AST x syntheticity (DiD)                 -0.0106  [-0.0284, +0.0071]  p=0.339
+   complement (unchanged), check   n= 339  AST effect +0.0015   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 186  AST effect +0.0094  [-0.0013, +0.0215]  p=0.118
+   AST x syntheticity (DiD)                 -0.0027  [-0.0269, +0.0215]  p=0.8942
+   complement (unchanged), check   n= 294  AST effect +0.0000   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 141  effect     +0.0284  [+0.0071, +0.0567]  p=0.0348
+
+====================================================================================
+Qwen   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [141, 53, 141, 53]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect -0.0031  [-0.0073, +0.0010]  p=0.1906
+PRIMARY (C1->C3 changed)           n= 141  AST effect -0.0089  [-0.0213, +0.0035]  p=0.1988
+   AST x syntheticity (DiD)                 +0.0177  [-0.0071, +0.0426]  p=0.1978
+   complement (unchanged), check   n= 339  AST effect -0.0007   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 186  AST effect -0.0081  [-0.0188, +0.0027]  p=0.1596
+   AST x syntheticity (DiD)                 +0.0108  [-0.0108, +0.0323]  p=0.3718
+   complement (unchanged), check   n= 294  AST effect +0.0000   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 141  effect     -0.0142  [-0.0426, +0.0142]  p=0.4588
+
+Note: subset selection depends only on the manifest (program text), not on model outputs,
+so it is not outcome-dependent; but it is a post-hoc analysis and is reported as exploratory.

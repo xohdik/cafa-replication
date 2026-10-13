@@ -1,0 +1,37 @@
+<unknown>:32: SyntaxWarning: invalid escape sequence '\i'
+<unknown>:39: SyntaxWarning: invalid escape sequence '\i'
+<unknown>:6: SyntaxWarning: invalid escape sequence '\d'
+<unknown>:6: SyntaxWarning: invalid escape sequence '\d'
+<unknown>:10: SyntaxWarning: invalid decimal literal
+<unknown>:32: SyntaxWarning: invalid escape sequence '\i'
+<unknown>:39: SyntaxWarning: invalid escape sequence '\i'
+<unknown>:6: SyntaxWarning: invalid escape sequence '\d'
+<unknown>:6: SyntaxWarning: invalid escape sequence '\d'
+<unknown>:10: SyntaxWarning: invalid decimal literal
+
+====================================================================================
+DeepSeek   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [141, 431, 141, 430]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect +0.0071  [-0.0064, +0.0207]  p=0.297
+PRIMARY (C1->C3 changed)           n= 141  AST effect +0.0012  [-0.0189, +0.0213]  p=0.925
+   AST x syntheticity (DiD)                 -0.0047  [-0.0426, +0.0331]  p=0.8102
+   complement (unchanged), check   n= 339  AST effect +0.0096   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 435  AST effect +0.0077  [-0.0069, +0.0222]  p=0.3198
+   AST x syntheticity (DiD)                 +0.0207  [-0.0080, +0.0506]  p=0.1652
+   complement (unchanged), check   n=  45  AST effect +0.0019   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 141  effect     +0.0071  [-0.0142, +0.0307]  p=0.6136
+
+====================================================================================
+Qwen   programs=480   pairs changed (C1-3, C2-4, C5-7, C6-8): [141, 431, 141, 430]
+====================================================================================
+ALL programs (as in Table VII)     n= 480  AST effect -0.0023  [-0.0165, +0.0118]  p=0.7452
+PRIMARY (C1->C3 changed)           n= 141  AST effect -0.0242  [-0.0455, -0.0035]  p=0.0236
+   AST x syntheticity (DiD)                 -0.0012  [-0.0449, +0.0449]  p=0.9488
+   complement (unchanged), check   n= 339  AST effect +0.0069   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 435  AST effect -0.0031  [-0.0184, +0.0119]  p=0.695
+   AST x syntheticity (DiD)                 -0.0023  [-0.0337, +0.0295]  p=0.884
+   complement (unchanged), check   n=  45  AST effect +0.0056   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 141  effect     -0.0260  [-0.0615, +0.0047]  p=0.1294
+
+Note: subset selection depends only on the manifest (program text), not on model outputs,
+so it is not outcome-dependent; but it is a post-hoc analysis and is reported as exploratory.

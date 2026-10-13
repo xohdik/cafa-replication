@@ -1,0 +1,40 @@
+== distinct problem ids per pilot file
+  manifest.json                      437
+  manifest_shape.json                437
+  manifest_smoke.json                5
+  manifest_v2.json                   437
+  rq4_samples_dated.jsonl            456
+  rq4_samples_dated_v2.jsonl         456
+  rq4_samples_verified.jsonl         456
+  rq4_samples_verified_v2.jsonl      456
+  UNION of all pilot files: 456
+== lines of make_confirmation_pairs.py that mention json/exclude/pilot
+  3: make_confirmation_pairs.py -- build a pairs file for a CONFIRMATION pool that is disjoint from the pilot at the PROBLEM level and has at mos
+  7: Excludes every problem that appears in the pilot pool(s). Then picks one pair per remaining problem with a fixed seed.
+  12:       --pairs /data/workzone/siamese_gat_emse/data/processed/pairs_codenet_python.json \
+  14:       --exclude rq4_samples_verified_v2.jsonl rq4_samples_verified.jsonl rq4_samples.jsonl rq4_samples_dated.jsonl rq4_samples_dated_v2.json
+  15:       --out pairs_confirm.json --seed 1
+  20: import json
+  29: ap.add_argument("--exclude", nargs="*", default=[])
+  35: pairs = json.load(open(a.pairs))
+  37: for f in a.exclude:
+  41:             r = json.loads(line)
+  45: print(f"pilot pools exclude: {len(excl_pairs)} pairs from {len(excl_problems)} distinct problems")
+  65: print(f"dropped: pilot problems {n_excl}, no test cases {n_notests}, unparseable {n_unparse}")
+  69: json.dump(chosen, open(a.out, "w"))
+== strata (DeepSeek, 10000 program-level resamples)
+  both single-line, real output not 0: n=1068  C1..C8 acc 0.403 0.170 0.404 0.174 0.364 0.283 0.357 0.285
+      S effect       -0.154 [-0.186,-0.121]
+      IxS            +0.154 [+0.122,+0.186]
+      I|real         -0.043 [-0.062,-0.024]
+      I|synth        +0.111 [+0.086,+0.137]
+      S|orig-names   -0.231 [-0.267,-0.195]
+      S|obf-names    -0.077 [-0.114,-0.039]
+  both multi-line: n=452  C1..C8 acc 0.051 0.040 0.051 0.040 0.051 0.091 0.051 0.086
+      S effect       +0.013 [-0.013,+0.039]
+      IxS            +0.049 [+0.020,+0.077]
+      I|real         +0.000 [-0.015,+0.017]
+      I|synth        +0.049 [+0.025,+0.073]
+      S|orig-names   -0.011 [-0.039,+0.015]
+      S|obf-names    +0.038 [+0.006,+0.070]
+  real output is 0: n=21  C1..C8 acc 0.238 0.238 0.238 0.238 0.286 0.429 0.333 0.381

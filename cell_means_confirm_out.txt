@@ -1,0 +1,38 @@
+
+======================================================================
+DeepSeek  (programs=1541)
+======================================================================
+condition              accuracy   95% CI
+C1 orig/orig/real         0.297   [0.274, 0.320]
+C2 orig/orig/synth        0.133   [0.116, 0.150]
+C3 orig/shuf/real         0.299   [0.275, 0.321]
+C4 orig/shuf/synth        0.136   [0.119, 0.152]
+C5 obf/orig/real          0.271   [0.249, 0.293]
+C6 obf/orig/synth         0.228   [0.207, 0.249]
+C7 obf/shuf/real          0.267   [0.244, 0.289]
+C8 obf/shuf/synth         0.228   [0.206, 0.248]
+
+simple effect                           effect   95% CI
+identifiers | real code                 -0.029   [-0.043, -0.015]
+identifiers | synthetic code            +0.094   [+0.075, +0.113]
+synthetic | original identifiers        -0.164   [-0.190, -0.137]
+synthetic | obfuscated identifiers      -0.041   [-0.069, -0.014]
+
+======================================================================
+Qwen  (programs=1541)
+======================================================================
+condition              accuracy   95% CI
+C1 orig/orig/real         0.287   [0.265, 0.310]
+C2 orig/orig/synth        0.296   [0.273, 0.318]
+C3 orig/shuf/real         0.285   [0.263, 0.308]
+C4 orig/shuf/synth        0.297   [0.274, 0.319]
+C5 obf/orig/real          0.262   [0.241, 0.284]
+C6 obf/orig/synth         0.260   [0.238, 0.282]
+C7 obf/shuf/real          0.263   [0.241, 0.285]
+C8 obf/shuf/synth         0.258   [0.236, 0.280]
+
+simple effect                           effect   95% CI
+identifiers | real code                 -0.023   [-0.037, -0.009]
+identifiers | synthetic code            -0.037   [-0.051, -0.023]
+synthetic | original identifiers        +0.010   [-0.017, +0.037]
+synthetic | obfuscated identifiers      -0.003   [-0.031, +0.024]

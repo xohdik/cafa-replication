@@ -1,0 +1,63 @@
+
+====================================================================================
+DeepSeek   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect -0.0003  [-0.0028, +0.0021]  p=0.8354
+PRIMARY (C1->C3 changed)           n= 541  AST effect -0.0009  [-0.0060, +0.0042]  p=0.7882
+   AST x syntheticity (DiD)                 +0.0092  [+0.0000, +0.0194]  p=0.0752
+   complement (unchanged), check   n=1000  AST effect +0.0000   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect -0.0015  [-0.0069, +0.0038]  p=0.64
+   AST x syntheticity (DiD)                 +0.0061  [-0.0046, +0.0168]  p=0.3086
+   complement (unchanged), check   n= 887  AST effect +0.0006   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     +0.0018  [-0.0111, +0.0148]  p=0.8826
+
+====================================================================================
+Qwen   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect -0.0006  [-0.0031, +0.0019]  p=0.6468
+PRIMARY (C1->C3 changed)           n= 541  AST effect +0.0009  [-0.0046, +0.0065]  p=0.8166
+   AST x syntheticity (DiD)                 +0.0018  [-0.0092, +0.0129]  p=0.822
+   complement (unchanged), check   n=1000  AST effect -0.0015   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect -0.0015  [-0.0073, +0.0042]  p=0.6502
+   AST x syntheticity (DiD)                 -0.0031  [-0.0145, +0.0084]  p=0.6454
+   complement (unchanged), check   n= 887  AST effect +0.0000   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     -0.0018  [-0.0166, +0.0129]  p=0.9068
+
+====================================================================================
+Qwen14B   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect +0.0011  [-0.0015, +0.0036]  p=0.4226
+PRIMARY (C1->C3 changed)           n= 541  AST effect +0.0023  [-0.0037, +0.0083]  p=0.494
+   AST x syntheticity (DiD)                 -0.0028  [-0.0148, +0.0092]  p=0.7236
+   complement (unchanged), check   n=1000  AST effect +0.0005   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect +0.0038  [-0.0011, +0.0092]  p=0.167
+   AST x syntheticity (DiD)                 +0.0015  [-0.0099, +0.0130]  p=0.8476
+   complement (unchanged), check   n= 887  AST effect -0.0008   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     -0.0055  [-0.0203, +0.0092]  p=0.501
+
+====================================================================================
+CodeLlama   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect -0.0032  [-0.0063, -0.0003]  p=0.0358
+PRIMARY (C1->C3 changed)           n= 541  AST effect +0.0042  [-0.0005, +0.0092]  p=0.09
+   AST x syntheticity (DiD)                 -0.0120  [-0.0222, -0.0028]  p=0.0102
+   complement (unchanged), check   n=1000  AST effect -0.0073   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect -0.0073  [-0.0141, -0.0008]  p=0.0328
+   AST x syntheticity (DiD)                 -0.0313  [-0.0443, -0.0183]  p=9.999e-05
+   complement (unchanged), check   n= 887  AST effect -0.0003   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     +0.0111  [+0.0037, +0.0203]  p=0.0044
+
+====================================================================================
+StarCoder2   programs=1541   pairs changed (C1-3, C2-4, C5-7, C6-8): [541, 134, 541, 134]
+====================================================================================
+ALL programs (as in Table VII)     n=1541  AST effect +0.0037  [+0.0006, +0.0068]  p=0.0196
+PRIMARY (C1->C3 changed)           n= 541  AST effect -0.0032  [-0.0088, +0.0018]  p=0.2664
+   AST x syntheticity (DiD)                 +0.0046  [-0.0055, +0.0157]  p=0.4324
+   complement (unchanged), check   n=1000  AST effect +0.0075   (expect ~0 for PRIMARY)
+ANY pair changed                   n= 654  AST effect +0.0073  [+0.0004, +0.0145]  p=0.0478
+   AST x syntheticity (DiD)                 +0.0222  [+0.0084, +0.0359]  p=0.001
+   complement (unchanged), check   n= 887  AST effect +0.0011   (expect ~0 for PRIMARY)
+C1->C3 pair alone, PRIMARY         n= 541  effect     -0.0037  [-0.0203, +0.0129]  p=0.7456
+
+Note: subset selection depends only on the manifest (program text), not on model outputs,
+so it is not outcome-dependent; but it is a post-hoc analysis and is reported as exploratory.

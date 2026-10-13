@@ -1,0 +1,39 @@
+== models/deepseek-coder-6.7b-base.Q4_K_M.gguf demo=orig
+C1: n=1541 median P('10')=0.0036 mean=0.0297 share top-1 first token = '10' start: 35.3%
+C2: n=1542 median P('10')=0.0446 mean=0.0478 share top-1 first token = '10' start: 85.7%
+C6: n=1542 median P('10')=0.0424 mean=0.0452 share top-1 first token = '10' start: 76.1%
+== models/deepseek-coder-6.7b-base.Q4_K_M.gguf demo=none
+C1: n=1541 median P('10')=0.0035 mean=0.0263 share top-1 first token = '10' start: 34.9%
+C2: n=1542 median P('10')=0.0352 mean=0.0366 share top-1 first token = '10' start: 74.8%
+C6: n=1542 median P('10')=0.0290 mean=0.0297 share top-1 first token = '10' start: 69.1%
+[(None, 3084)] [(None, 22)] ['sample_index', 'condition_id', 'problem_id', 'gguf', 'n_ctx', 'status', 'prediction', 'expected', 'stdin', 'correct']
+#!/usr/bin/env python3
+"""
+demo_sensitivity.py -- is the C2 (synthetic + original names) failure caused by the one-shot DEMONSTRATION in the prompt?
+Reruns conditions C1, C2, C5, C6 (identifiers x syntheticity; AST is null and left out) under three demonstrations:
+  v0 = the harness's own demo (n*2)  -- must reproduce the existing run (sanity check)
+  v1 = a = int(input()); print(a + 7)
+  v2 = s = input(); print(s[::-1])
+Reports accuracy and the four simple effects per demonstration. Resumable: finished variants are kept in --out.
+Usage (cafa env, from capa/):
+  CUDA_VISIBLE_DEVICES=0 python3 demo_sensitivity.py --manifest manifest_v2.json \
+      --gguf ./models/deepseek-coder-6.7b-base.Q4_K_M.gguf --out demo_deepseek.json
+"""
+import argparse
+import json
+import os
+
+import numpy as np
+
+import scoring_harness as H
+
+VARIANTS = {
+    "v0_n_times_2": None,  # harness default
+    "v1_a_plus_7": ("a = int(input())\nprint(a + 7)", "5", "12"),
+    "v2_reverse_string": ("s = input()\nprint(s[::-1])", "abc", "cba"),
+}
+BASE = H.PROMPT_TEMPLATE
+
+
+def template(v):
+    if v is None:

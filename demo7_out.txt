@@ -1,0 +1,34 @@
+== DeepSeek-Coder 1541 programs scored under both demonstrations
+orig (answer 10): acc C1 0.297 C2 0.134 C5 0.270 C6 0.228
+   first line = 10: C1 6.3% C2 49.8% C5 6.2% C6 42.6% | first line = 8: C1 0.7% C2 0.1% C5 0.4% C6 1.6%
+     S|orig   -16.3 [-18.9, -13.5]
+     S|obf    -4.2 [-6.9, -1.3]
+     I|real   -2.7 [-4.2, -1.2]
+     I|synth  +9.4 [+7.5, +11.4]
+     IxS      +12.1 [+9.7, +14.7]
+orig8 (answer 8): acc C1 0.299 C2 0.151 C5 0.270 C6 0.234
+   first line = 10: C1 5.5% C2 21.3% C5 5.3% C6 15.6% | first line = 8: C1 0.9% C2 1.0% C5 0.6% C6 1.9%
+     S|orig   -14.8 [-17.5, -12.0]
+     S|obf    -3.6 [-6.4, -0.7]
+     I|real   -2.9 [-4.4, -1.4]
+     I|synth  +8.2 [+6.3, +10.2]
+     IxS      +11.2 [+8.8, +13.6]
+  orig8 minus orig, S|orig: +1.5 [+0.5, +2.6]
+  orig8 minus orig, IxS: -1.0 [-2.3, +0.4]
+== StarCoder2 1541 programs scored under both demonstrations
+orig (answer 10): acc C1 0.239 C2 0.131 C5 0.226 C6 0.186
+   first line = 10: C1 9.0% C2 27.9% C5 8.8% C6 24.2% | first line = 8: C1 0.8% C2 0.6% C5 0.6% C6 1.1%
+     S|orig   -10.8 [-13.3, -8.2]
+     S|obf    -4.0 [-6.6, -1.3]
+     I|real   -1.3 [-2.5, -0.1]
+     I|synth  +5.5 [+4.0, +7.1]
+     IxS      +6.8 [+4.8, +8.8]
+orig8 (answer 8): acc C1 0.238 C2 0.148 C5 0.228 C6 0.189
+   first line = 10: C1 8.6% C2 19.3% C5 8.4% C6 19.3% | first line = 8: C1 0.8% C2 1.4% C5 0.6% C6 1.3%
+     S|orig   -9.0 [-11.6, -6.4]
+     S|obf    -4.0 [-6.6, -1.3]
+     I|real   -1.0 [-2.2, +0.2]
+     I|synth  +4.1 [+2.7, +5.5]
+     IxS      +5.1 [+3.2, +6.9]
+  orig8 minus orig, S|orig: +1.8 [+0.6, +2.9]
+  orig8 minus orig, IxS: -1.8 [-3.2, -0.3]

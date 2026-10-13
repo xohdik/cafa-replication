@@ -1,0 +1,102 @@
+{
+ "config": "rank_models.json",
+ "seed": 20261012,
+ "boot": 10000,
+ "splits": 1000,
+ "prompts": {
+  "orig": {
+   "m": 15,
+   "N": 1541,
+   "pairs": 105,
+   "tau": 0.6190476190476191,
+   "flip_share": 0.19047619047619047,
+   "tie_share_real": 0.0,
+   "tie_share_synth": 0.0,
+   "tau_ci": [
+    0.4666666666666667,
+    0.6571428571428571
+   ],
+   "flip_ci": [
+    0.17142857142857143,
+    0.2571428571428571
+   ],
+   "decisive_pairs": 84,
+   "decisive_flips": 12,
+   "decisive_flip_share": 0.14285714285714285,
+   "split_half_real": {
+    "median": 0.8476190476190476,
+    "p05": 0.7846979774097266
+   },
+   "split_half_synth": {
+    "median": 0.9186708028211433,
+    "p05": 0.8666666666666667
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true,
+   "models": [
+    "DeepSeek-Coder-6.7B",
+    "StarCoder2-7B",
+    "CodeLlama-7B",
+    "Qwen2.5-Coder-7B",
+    "Qwen2.5-Coder-14B",
+    "DeepSeek-Coder-1.3B",
+    "Qwen2.5-Coder-1.5B",
+    "Qwen2.5-Coder-3B",
+    "StarCoder2-3B",
+    "StarCoder2-15B",
+    "CodeLlama-13B",
+    "CodeGemma-7B",
+    "Granite-Code-3B-128k",
+    "Granite-Code-8B-128k",
+    "Yi-Coder-9B"
+   ]
+  },
+  "none": {
+   "m": 15,
+   "N": 1541,
+   "pairs": 105,
+   "tau": 0.6124472018807622,
+   "flip_share": 0.19047619047619047,
+   "tie_share_real": 0.009523809523809525,
+   "tie_share_synth": 0.0,
+   "tau_ci": [
+    0.5167523265868931,
+    0.6761904761904762
+   ],
+   "flip_ci": [
+    0.1619047619047619,
+    0.23809523809523808
+   ],
+   "decisive_pairs": 94,
+   "decisive_flips": 14,
+   "decisive_flip_share": 0.14893617021276595,
+   "split_half_real": {
+    "median": 0.9238095238095239,
+    "p05": 0.8857142857142857
+   },
+   "split_half_synth": {
+    "median": 0.9135037687169163,
+    "p05": 0.8476190476190476
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true,
+   "models": [
+    "DeepSeek-Coder-6.7B",
+    "StarCoder2-7B",
+    "CodeLlama-7B",
+    "Qwen2.5-Coder-7B",
+    "Qwen2.5-Coder-14B",
+    "DeepSeek-Coder-1.3B",
+    "Qwen2.5-Coder-1.5B",
+    "Qwen2.5-Coder-3B",
+    "StarCoder2-3B",
+    "StarCoder2-15B",
+    "CodeLlama-13B",
+    "CodeGemma-7B",
+    "Granite-Code-3B-128k",
+    "Granite-Code-8B-128k",
+    "Yi-Coder-9B"
+   ]
+  }
+ }
+}

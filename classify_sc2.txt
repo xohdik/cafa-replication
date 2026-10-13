@@ -1,0 +1,18 @@
+== rerun_sc2_q4.jsonl: 3084 records; status counts: {'ok': 3083, 'skipped_too_long': 1}
+== reproduction vs original run (responses_starcoder2_confirm.json): 3076/3083 cells identical (0.9977); original accuracy 0.1839, rerun 0.1849
+
+category                       C1: n(%wrong) [%all]          C2: n(%wrong) [%all]
+empty                           0 (  0.0%) [  0.0%]           0 (  0.0%) [  0.0%]
+echoes_input                   79 (  6.7%) [  5.1%]           0 (  0.0%) [  0.0%]
+truncated_prefix                2 (  0.2%) [  0.1%]           1 (  0.1%) [  0.1%]
+extra_output                   18 (  1.5%) [  1.2%]           1 (  0.1%) [  0.1%]
+wrong_line_count              280 ( 23.9%) [ 18.2%]         134 ( 10.0%) [  8.7%]
+format_variant                  4 (  0.3%) [  0.3%]           0 (  0.0%) [  0.0%]
+numeric_off_by_one            181 ( 15.4%) [ 11.7%]          44 (  3.3%) [  2.9%]
+numeric_wrong                 505 ( 43.1%) [ 32.8%]        1160 ( 86.6%) [ 75.2%]
+other_value                   104 (  8.9%) [  6.7%]           0 (  0.0%) [  0.0%]
+TOTAL wrong                1173 of 1541 (acc 0.239)      1340 of 1542 (acc 0.131)
+
+paired programs n=1541: C1 right/C2 right=75  C1 right/C2 wrong=293  C1 wrong/C2 right=127  both wrong=1046
+
+wrote rerun_sc2_q4_taxonomy.json (summary + 50 random wrong answers; contains no program code)

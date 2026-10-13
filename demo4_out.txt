@@ -1,0 +1,21 @@
+file | condition | n | accuracy | demo | first line == demo output | first line == "10" | correct first line == demo output
+rerun_ds_q4.jsonl          C1 n=1541 acc=0.297 demo=orig    copy 6.3%   | "10": 6.3% | right answer is that string: 1.5%
+rerun_ds_q4.jsonl          C2 n=1542 acc=0.134 demo=orig    copy 49.9%  | "10": 49.9% | right answer is that string: 0.7%
+rerun_ds_q4_c56.jsonl      C5 n=1541 acc=0.270 demo=orig    copy 6.2%   | "10": 6.2% | right answer is that string: 1.5%
+rerun_ds_q4_c56.jsonl      C6 n=1542 acc=0.228 demo=orig    copy 42.6%  | "10": 42.6% | right answer is that string: 0.7%
+rerun_ds_q8.jsonl          C1 n=1541 acc=0.303 demo=orig    copy 6.0%   | "10": 6.0% | right answer is that string: 1.5%
+rerun_ds_q8.jsonl          C2 n=1542 acc=0.132 demo=orig    copy 54.0%  | "10": 54.0% | right answer is that string: 0.7%
+rerun_ds_q8.jsonl          C5 n=1541 acc=0.280 demo=orig    copy 6.5%   | "10": 6.5% | right answer is that string: 1.5%
+rerun_ds_q8.jsonl          C6 n=1542 acc=0.224 demo=orig    copy 48.2%  | "10": 48.2% | right answer is that string: 0.7%
+rerun_dsnone_q4.jsonl      C1 n=1541 acc=0.231 demo=none    copy -      | "10": 5.8% | right answer is that string: -
+rerun_dsnone_q4.jsonl      C2 n=1542 acc=0.230 demo=none    copy -      | "10": 37.3% | right answer is that string: -
+rerun_dsnone_q4.jsonl      C5 n=1541 acc=0.199 demo=none    copy -      | "10": 5.1% | right answer is that string: -
+rerun_dsnone_q4.jsonl      C6 n=1542 acc=0.225 demo=none    copy -      | "10": 22.2% | right answer is that string: -
+rerun_dsrev_q4.jsonl       C1 n=1541 acc=0.299 demo=reverse copy 0.1%   | "10": 5.3% | right answer is that string: 0.1%
+rerun_dsrev_q4.jsonl       C2 n=1542 acc=0.149 demo=reverse copy 0.0%   | "10": 24.5% | right answer is that string: 0.0%
+rerun_dsrev_q4.jsonl       C5 n=1541 acc=0.267 demo=reverse copy 0.2%   | "10": 5.1% | right answer is that string: 0.1%
+rerun_dsrev_q4.jsonl       C6 n=1542 acc=0.259 demo=reverse copy 0.0%   | "10": 19.6% | right answer is that string: 0.0%
+rerun_sc2_q4.jsonl         C1 n=1541 acc=0.239 demo=orig    copy 9.0%   | "10": 9.0% | right answer is that string: 1.5%
+rerun_sc2_q4.jsonl         C2 n=1542 acc=0.131 demo=orig    copy 27.9%  | "10": 27.9% | right answer is that string: 0.7%
+rerun_sc2_q4_c56.jsonl     C5 n=1541 acc=0.226 demo=orig    copy 8.8%   | "10": 8.8% | right answer is that string: 1.5%
+rerun_sc2_q4_c56.jsonl     C6 n=1542 acc=0.186 demo=orig    copy 24.2%  | "10": 24.2% | right answer is that string: 0.7%

@@ -1,0 +1,8 @@
+group                             n   DeepSeek                         Qwen                             Qwen14B                          CodeLlama                        StarCoder2                    
+ALL programs                   1541   -0.102 [-0.128,-0.078] p=0.0001   +0.004 [-0.022,+0.029] p=0.784   +0.030 [+0.004,+0.055] p=0.0234   -0.035 [-0.057,-0.013] p=0.0024   -0.069 [-0.092,-0.046] p=0.0001
+real single & synth single     1068   -0.154 [-0.187,-0.121] p=0.0001   -0.014 [-0.048,+0.020] p=0.423   +0.033 [-0.003,+0.068] p=0.0672   -0.061 [-0.092,-0.030] p=0.0001   -0.113 [-0.144,-0.081] p=0.0001
+real multi-line                 452   +0.013 [-0.013,+0.039] p=0.332   +0.031 [+0.001,+0.061] p=0.0462   +0.020 [-0.010,+0.051] p=0.201   +0.017 [-0.006,+0.039] p=0.152   +0.024 [+0.001,+0.048] p=0.0414
+synth zero (real single)          0   too few programs
+
+Effects are signed accuracy differences (synthetic minus real); negative = synthetic is harder.
+Groups are exploratory subsets defined from program outputs in the manifest, not from model scores.

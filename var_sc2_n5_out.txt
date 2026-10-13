@@ -1,0 +1,8 @@
+programs compared: 1541
+accuracy  real 23.9  generator base 13.1  generator variant 9.4
+penalty   base -10.8  variant -14.5  change -3.7 [-5.4, -2.0]
+first line = 10   base 27.9%  variant 36.6%  change +8.7 [+6.6, +10.8]
+correct first line = 10   base 0.7%  variant 2.7%
+most common first lines (base): [('100', 31.9), ('10', 27.9), ('12', 8.5), ('3', 4.3), ('15', 3.7)]
+most common first lines (variant): [('10', 36.6), ('100', 31.7), ('15', 5.7), ('5', 4.2), ('1', 2.9)]
+pre-registered readings: preference for 10 weakens = False;  penalty shrinks = False
