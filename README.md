@@ -63,6 +63,10 @@ main study:
 Each file was matched to its repository by SHA-256 (`MODEL_SHA256.txt` against the repository's file listing). Put the files in `models/` (git-ignored). The Q8_0 file used for the precision check is `deepseek-coder-6.7b-base.Q8_0.gguf` from
 `TheBloke/deepseek-coder-6.7B-base-GGUF`.
 
+The ten additional models of the ranking study are listed with their repositories in
+[`NOTE_base_checkpoints.md`](NOTE_base_checkpoints.md), together with the post-hoc check that every checkpoint is a base model.
+That check reads repository metadata only; the weights were not inspected.
+
 ## Data
 
 The programs come from Project CodeNet (IBM). The CodeNet code repository is Apache-2.0; the dataset is released under a permissive

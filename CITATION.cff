@@ -12,6 +12,7 @@ authors:
   - family-names: Wang
     given-names: Weidong
 license: MIT
+repository-code: "https://github.com/xohdik/cafa-replication"
 version: "1.0.0"
 date-released: "2026-10-13"
 keywords:
