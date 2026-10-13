@@ -1,0 +1,2 @@
+2026-10-10T10:32:37Z manifest_confirm.json sha256=a8978b7ad107505658e426926e3568345af18f13ebf7ede74adce45edf155c3d n=1542. Analysis fixed in advance: 7 signed factorial terms, program-level bootstrap 10000, Holm over 7 terms, plus the four simple effects. Models DeepSeek-Coder-6.7B and Qwen2.5-Coder-7B, greedy, 1 pass. No analysis changes after scoring.
+2026-10-11T04:18:18Z Complete-case rule dropped 1 program (index 671: real-code cells C1,C3,C5,C7 skipped by harness identically in both models). n=1541.
