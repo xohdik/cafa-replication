@@ -149,7 +149,7 @@ Three analyses were committed to this repository before the runs they govern:
 |---|---|---|
 | Generator variants and answer-8 runs | `PREREG_variants.md` | `bd8e394dac364ac5a584299075f014210f13e04a` (2026-10-12 19:31 +0800) |
 | 15-model ranking study | `PREREG_ranking.md` | `7a5416b6d108fe89955ca485630f06a5e6069673` (2026-10-12 22:07 +0800) |
-| Identifier-group check on the confirmation set | `PREREG_idgroups.md` | `f9ee130` (2026-10-13 09:13 +0800) |
+| Identifier-group check on the confirmation set | `PREREG_idgroups.md` | `f9ee130c3b40b10fd61ab2def6883d2840f650f8` (2026-10-13 09:13 +0800) |
 
 The plan of the confirmation analysis (`PREREG_confirm.txt`) was fixed before scoring only through the SHA-256 of
 `manifest_confirm.json`; the file itself was added to the repository later, so there is no commit that precedes the runs. The paper
