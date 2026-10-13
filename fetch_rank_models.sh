@@ -1,6 +1,6 @@
 #!/bin/bash
 # downloads the ten new Q4_K_M files into models/ (needs huggingface_hub; export HF_ENDPOINT=https://hf-mirror.com if the Hub is unreachable)
-cd /data/workzone/capa
+cd "$(dirname "$0")"
 python3 gguf_tool.py get TheBloke/deepseek-coder-1.3b-base-GGUF deepseek-coder-1.3b-base.Q4_K_M.gguf
 python3 gguf_tool.py get mradermacher/Qwen2.5-Coder-1.5B-GGUF Qwen2.5-Coder-1.5B.Q4_K_M.gguf
 python3 gguf_tool.py get mradermacher/Qwen2.5-Coder-3B-GGUF Qwen2.5-Coder-3B.Q4_K_M.gguf
