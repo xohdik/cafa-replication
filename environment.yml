@@ -1,0 +1,12 @@
+name: cafa
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - llama-cpp-python==0.3.34   # built with CUDA support, see README.md
+      - numpy==1.26.4
+      - torch==2.1.2+cu121         # only needed by the early operator-development scripts
+      - huggingface-hub==1.26.0    # only needed to download the GGUF files

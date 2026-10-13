@@ -1,0 +1,22 @@
+# model weights and the raw dataset are large and have their own licences: obtain them as described in README.md
+models/
+Project_CodeNet/
+Project_CodeNet_merged/
+
+# Python and editor artefacts
+__pycache__/
+*.pyc
+*.bak*
+*.checkpoint
+.cache/
+nohup.out
+
+# run logs and one-off working notes (the results are in the *_out.txt, *.json and *.jsonl files)
+log_*.txt
+*.log
+harness_context.txt
+repo_info*.txt
+name_scripts.txt
+gguf_find_out.txt
+/smoke.jsonl
+/smoke_out.txt

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the paper and this archive."
+title: "CAFA replication package: Controlled Attribution by Factorial Analysis of identifier, statement-order and program-source perturbations in code-model evaluation"
+type: software
+authors:
+  - family-names: Babatunde
+    given-names: "Ologun S."
+  - family-names: Wang
+    given-names: Qingxian
+  - family-names: Chen
+    given-names: Bo
+  - family-names: Wang
+    given-names: Weidong
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-13"
+keywords:
+  - code models
+  - benchmark evaluation
+  - factorial design
+  - program perturbation
+  - Project CodeNet
