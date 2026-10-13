@@ -1,0 +1,26 @@
+finished none: scored 1542 of 1542 programs having that group, dropped 0
+finished n: scored 1539 of 1539 programs having that group, dropped 0
+finished result: scored 1489 of 1489 programs having that group, dropped 0
+finished loop: scored 1227 of 1227 programs having that group, dropped 0
+finished pad: scored 1375 of 1375 programs having that group, dropped 0
+finished other: scored 0 of 0 programs having that group, dropped 0
+finished all: scored 1539 of 1539 programs having that group, dropped 0
+
+variant  programs  accuracy   change vs none (same programs)    
+none         1542     0.296    +0.000 [+0.000, +0.000]   (none on these = 0.296)
+n            1539     0.313    +0.019 [+0.010, +0.029]   (none on these = 0.294)
+result       1489     0.257    -0.014 [-0.026, -0.003]   (none on these = 0.271)
+loop         1227     0.154    +0.001 [-0.007, +0.009]   (none on these = 0.153)
+pad          1375     0.225    -0.009 [-0.020, +0.001]   (none on these = 0.234)
+other           0
+all          1539     0.261    -0.034 [-0.048, -0.020]   (none on these = 0.294)
+finished none: scored 1542 of 1542 eligible programs, dropped 0
+finished n: scored 1539 of 1539 eligible programs, dropped 0
+finished result: scored 1489 of 1489 eligible programs, dropped 0
+finished both: scored 1489 of 1489 eligible programs, dropped 0
+
+variant  programs  accuracy   change vs none (same programs)    
+none         1542     0.296    +0.000 [+0.000, +0.000]   (none on these = 0.296)
+n            1539     0.295    +0.001 [-0.008, +0.009]   (none on these = 0.294)
+result       1489     0.276    +0.005 [-0.003, +0.013]   (none on these = 0.271)
+both         1489     0.281    +0.010 [+0.000, +0.021]   (none on these = 0.271)
