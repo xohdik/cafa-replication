@@ -3,6 +3,8 @@
 Replication package for *Controlled Attribution by Factorial Analysis (CAFA): Execution-Verified Perturbations of Identifiers,
 Statement Order and Program Source in Code-Model Evaluation* (Babatunde, Wang, Chen, Wang; submitted to ACM TOSEM).
 
+Archive: [10.5281/zenodo.23332043](https://doi.org/10.5281/zenodo.23332043) (Zenodo, version 1.0.0).
+
 CAFA scores a code model on the same programs under every combination of three execution-verified interventions, a full 2^3
 factorial, and reports signed effects with program-level bootstrap intervals:
 
@@ -75,6 +77,11 @@ of the 1,541 confirmation programs and of the pilot programs, their test inputs 
 other CodeNet content is redistributed. The manifests are identified by SHA-256: the confirmation manifest
 `manifest_confirm.json` is `a8978b7ad107505658e426926e3568345af18f13ebf7ede74adce45edf155c3d` and the corrected pilot manifest
 `manifest_v2.json` is `cfbcac4f988b5ceff0505cabcebd7983942887800fc6bfcbd0e2e0b5b4d2263e`. Check with `sha256sum`.
+
+The per-cell model outputs are raw generations, and a base model can reproduce text from its training data. Two email addresses
+that one model (Yi-Coder-9B, `rank_out/Yi_Coder_9B_none.jsonl`) reproduced in this way were replaced by `REDACTED_EMAIL` before
+publication; the commits after the three registration commits were rewritten once for this. No score reads that text, and the
+three registration commits are unchanged.
 
 ## Reproducing the results
 
