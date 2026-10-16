@@ -5,3 +5,7 @@
 - v3 (21ec3e1dce56): depth steering. Gate A 98.7%; names still failed Gate B (-0.229, +0.186).
 - v3b (2f1e3bdb7c5f): name-length calibration (+0.6) and best-of-four selection. Gate A 98.96%, Gate B PASS (all matched covariates within threshold).
 No model output was seen at any step. Revisions used: both allowed after v2.
+
+## G2 manifest and Gate C (2026-10-16, before any model was scored on G2 programs)
+- manifest_g2.json sha256 36a51e524f0568687606d63a0cadaa81f1507e89ce0d87601a150d9ecbc23637; 1,526 samples (the 1,526 matched at Gate A), conditions 2, 4, 6, 8. PREREG_G2.md states 1,542 samples per cell; the experiments use 1,526 (E1 = 30,520 generations) because 16 long programs were not matched. They are reported in the selection check.
+- Gate C passed: 0 run failures, 0 output mismatches across the four conditions on three stdin cases. 0 of 3,052 shuffles reverted, but only 665 of 1,526 shuffles per I level changed the code (the rest had nothing independent to reorder).

@@ -1,0 +1,23 @@
+{
+ "manifest_sha256": "36a51e524f0568687606d63a0cadaa81f1507e89ce0d87601a150d9ecbc23637",
+ "n_samples": 1526,
+ "n_excluded": 0,
+ "excluded_reasons": {},
+ "samples_with_run_failure": 0,
+ "samples_with_output_mismatch": 0,
+ "x3": {
+  "shuffled": 3052,
+  "reverted": 0
+ },
+ "effective_changes": {
+  "A_changed(4 vs 2)": 665,
+  "A_changed(8 vs 6)": 665,
+  "I_changed(6 vs 2)": 1526
+ },
+ "chars_median_max": [
+  547,
+  8819
+ ],
+ "gate_C_pass": true,
+ "examples_failed": []
+}

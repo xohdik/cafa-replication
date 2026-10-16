@@ -4,7 +4,7 @@ Status: written before G2 programs were generated and before any model was score
 `g2_features.py`, `g2_generate.py` and `g2_balance.py` first; record the commit hash and date in the paper's Data
 Availability paragraph and fill the bracketed fields.
 
-Date fixed: 2026-10-16    Commit: [hash]
+Date fixed: 2026-10-16    Commit: 56d3ef696c2c0dd3bc6617718442c9887f455672
 Script hashes (sha256 prefix, recompute if a file changes before the commit): g2_features.py e0e14d2b1cda,
 g2_generate.py 2f1e3bdb7c5f, g2_balance.py c88e391b9579.
 
