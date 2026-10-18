@@ -13,3 +13,5 @@ No model output was seen at any step. Revisions used: both allowed after v2.
 ## G2 experiments (2026-10-18)
 - E1/E2/E3 run on manifest_g2.json (1,526 samples; 1,525 with all eight cells). g2_analyze.py implements H1 to H3 exactly as in PREREG_G2.md, except that the Holm family for H3 (five models' G2 source-by-prompt p-values) was not named in the pre-registration and was chosen when the script was written, before any result was seen.
 - g2_posthoc_outlen.py is POST HOC (written after seeing that G2 accuracy is 8 to 13 percent against 20 to 34 for real programs and that G2 outputs are longer than real ones).
+- g2_posthoc_strata.py is POST HOC. It repeats S, IS, SP and ISP inside two strata defined from expected outputs only (real and G2 both single-token, n = 385; G2 single-token, n = 421). It is reported as a robustness analysis. The pre-registered readings of H1 to H3 are unchanged.
+- g2_rank.py implements H4 as written in PREREG_G2.md, reusing rank_analysis.analyse. It uses the 1,526 G2 programs that all 15 models have scored under real, G1 and G2.

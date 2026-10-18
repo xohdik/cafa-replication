@@ -1,0 +1,164 @@
+{
+ "orig": {
+  "G2": {
+   "m": 15,
+   "N": 1525,
+   "pairs": 105,
+   "tau": 0.7464200272921789,
+   "flip_share": 0.12380952380952381,
+   "tie_share_real": 0.0,
+   "tie_share_synth": 0.009523809523809525,
+   "tau_ci": [
+    0.5428571428571428,
+    0.8116055678739945
+   ],
+   "flip_ci": [
+    0.08571428571428572,
+    0.21904761904761905
+   ],
+   "decisive_pairs": 84,
+   "decisive_flips": 3,
+   "decisive_flip_share": 0.03571428571428571,
+   "split_half_real": {
+    "median": 0.8502514674371425,
+    "p05": 0.7788803603530099
+   },
+   "split_half_synth": {
+    "median": 0.6893203883495146,
+    "p05": 0.5588490446283195
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true
+  },
+  "G1": {
+   "m": 15,
+   "N": 1525,
+   "pairs": 105,
+   "tau": 0.6,
+   "flip_share": 0.2,
+   "tie_share_real": 0.0,
+   "tie_share_synth": 0.0,
+   "tau_ci": [
+    0.4784743764693455,
+    0.6571428571428571
+   ],
+   "flip_ci": [
+    0.17142857142857143,
+    0.2571428571428571
+   ],
+   "decisive_pairs": 84,
+   "decisive_flips": 12,
+   "decisive_flip_share": 0.14285714285714285,
+   "split_half_real": {
+    "median": 0.8502514674371425,
+    "p05": 0.7788803603530099
+   },
+   "split_half_synth": {
+    "median": 0.9238095238095239,
+    "p05": 0.8666666666666667
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true
+  },
+  "tau_G1_vs_G2": 0.631586176939536,
+  "models": [
+   "DeepSeek-Coder-6.7B",
+   "StarCoder2-7B",
+   "CodeLlama-7B",
+   "Qwen2.5-Coder-7B",
+   "Qwen2.5-Coder-14B",
+   "CodeGemma-7B",
+   "CodeLlama-13B",
+   "DeepSeek-Coder-1.3B",
+   "Granite-Code-3B-128k",
+   "Granite-Code-8B-128k",
+   "Qwen2.5-Coder-1.5B",
+   "Qwen2.5-Coder-3B",
+   "StarCoder2-15B",
+   "StarCoder2-3B",
+   "Yi-Coder-9B"
+  ],
+  "N": 1525
+ },
+ "none": {
+  "G2": {
+   "m": 15,
+   "N": 1525,
+   "pairs": 105,
+   "tau": 0.7904761904761904,
+   "flip_share": 0.10476190476190476,
+   "tie_share_real": 0.0,
+   "tie_share_synth": 0.0,
+   "tau_ci": [
+    0.6890031021158575,
+    0.8558792872912206
+   ],
+   "flip_ci": [
+    0.06666666666666667,
+    0.1523809523809524
+   ],
+   "decisive_pairs": 94,
+   "decisive_flips": 5,
+   "decisive_flip_share": 0.05319148936170213,
+   "split_half_real": {
+    "median": 0.9275470553859737,
+    "p05": 0.8803928527035957
+   },
+   "split_half_synth": {
+    "median": 0.8695753644243503,
+    "p05": 0.7788461538461539
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true
+  },
+  "G1": {
+   "m": 15,
+   "N": 1525,
+   "pairs": 105,
+   "tau": 0.6,
+   "flip_share": 0.2,
+   "tie_share_real": 0.0,
+   "tie_share_synth": 0.0,
+   "tau_ci": [
+    0.5238095238095238,
+    0.6761904761904762
+   ],
+   "flip_ci": [
+    0.1619047619047619,
+    0.23809523809523808
+   ],
+   "decisive_pairs": 94,
+   "decisive_flips": 14,
+   "decisive_flip_share": 0.14893617021276595,
+   "split_half_real": {
+    "median": 0.9275470553859737,
+    "p05": 0.8803928527035957
+   },
+   "split_half_synth": {
+    "median": 0.9238095238095239,
+    "p05": 0.8612538776448219
+   },
+   "material_rule": "tau below the 5th percentile of the real-vs-real split-half tau",
+   "material": true
+  },
+  "tau_G1_vs_G2": 0.5428571428571428,
+  "models": [
+   "DeepSeek-Coder-6.7B",
+   "StarCoder2-7B",
+   "CodeLlama-7B",
+   "Qwen2.5-Coder-7B",
+   "Qwen2.5-Coder-14B",
+   "CodeGemma-7B",
+   "CodeLlama-13B",
+   "DeepSeek-Coder-1.3B",
+   "Granite-Code-3B-128k",
+   "Granite-Code-8B-128k",
+   "Qwen2.5-Coder-1.5B",
+   "Qwen2.5-Coder-3B",
+   "StarCoder2-15B",
+   "StarCoder2-3B",
+   "Yi-Coder-9B"
+  ],
+  "N": 1525
+ }
+}
