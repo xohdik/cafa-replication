@@ -13,7 +13,7 @@ import argparse, collections, hashlib, json, os, random, re, sys
 import multiprocessing as mp
 from g2_features import run_code
 
-MAX_REFS, MAX_ATT, WANT = 6, 40, 2
+MAX_REFS, MAX_ATT, WANT = 6, 60, 2
 INT = re.compile(r"^[+-]?\d+$"); FLT = re.compile(r"^[+-]?\d*\.\d+$")
 TIMEOUT, MEM = 10.0, 4096
 
@@ -26,31 +26,60 @@ def seed_of(*a):
     return int(hashlib.sha256("|".join(map(str, a)).encode()).hexdigest()[:8], 16)
 
 
-def redraw(rng, t):
-    if INT.match(t):
-        a = abs(int(t)); sign = "-" if t.startswith("-") else ""
-        if a == 0: return t
-        d = len(str(a)); lo, hi = (1, 9) if d == 1 else (10 ** (d - 1), 10 ** d - 1)
-        return sign + str(rng.randint(lo, hi))
-    if FLT.match(t):
-        dec = len(t.split(".")[1]); v = float(t) * rng.uniform(0.7, 1.3)
-        return f"{v:.{dec}f}"
-    out = []
-    for ch in t:
-        if ch.islower(): out.append(rng.choice("abcdefghijklmnopqrstuvwxyz"))
-        elif ch.isupper(): out.append(rng.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
-        elif ch.isdigit(): out.append(rng.choice("0123456789"))
-        else: out.append(ch)
-    return "".join(out)
+def is_bits(t):
+    return len(t) >= 2 and set(t) <= {"0", "1"}
 
 
-def mutate(txt, rng, p):
-    lines = txt.split("\n"); res = []
-    for li, line in enumerate(lines):
-        toks = line.split(" ")
-        keep = li == 0 and len(lines) > 2 and all(INT.match(t) for t in toks if t != "")
-        res.append(" ".join(t if (t == "" or keep or rng.random() > p) else redraw(rng, t) for t in toks))
-    return "\n".join(res)
+def mutate(txt, rng, att):
+    """Six modes by attempt: integer values redrawn within the min-max range of the input (full / 30% of tokens), same-digit-length redraw (full / 30%),
+    tokens shuffled within each non-header line, non-header lines shuffled. Strings and grids are redrawn over the alphabet that occurs in the input;
+    the header line of multi-line inputs (counts) is kept."""
+    mode = att % 6
+    lines = txt.split("\n")
+    header = len(lines) > 2 and all(INT.match(t) for t in lines[0].split(" ") if t != "")
+    body = list(range(1 if header else 0, len(lines)))
+    toks = [lines[i].split(" ") for i in range(len(lines))]
+    ints = [int(t) for i in body for t in toks[i] if t and INT.match(t) and not is_bits(t)]
+    lo, hi = (min(ints), max(ints)) if ints else (0, 0)
+    alpha = sorted({c for i in body for t in toks[i] if t and not INT.match(t) and not FLT.match(t) for c in t})
+    if mode == 4:
+        for i in body:
+            idx = [k for k, t in enumerate(toks[i]) if t != ""]
+            vals = [toks[i][k] for k in idx]; rng.shuffle(vals)
+            for k, v in zip(idx, vals): toks[i][k] = v
+        return "\n".join(" ".join(t) for t in toks)
+    if mode == 5:
+        nz = [i for i in body if lines[i] != ""]; order = nz[:]; rng.shuffle(order)
+        new = list(lines)
+        for i, j in zip(nz, order): new[i] = lines[j]
+        return "\n".join(new)
+    p = 1.0 if mode in (0, 2) else 0.3
+    use_range = mode in (0, 1) and hi > lo
+    for i in body:
+        for k, t in enumerate(toks[i]):
+            if t == "" or rng.random() > p: continue
+            if is_bits(t):
+                toks[i][k] = "".join(rng.choice("01") for _ in t)
+            elif INT.match(t):
+                a_ = abs(int(t)); sign = "-" if t.startswith("-") else ""
+                if use_range: toks[i][k] = str(rng.randint(lo, hi))
+                elif a_ == 0: pass
+                else:
+                    d = len(str(a_)); l2, h2 = (1, 9) if d == 1 else (10 ** (d - 1), 10 ** d - 1)
+                    toks[i][k] = sign + str(rng.randint(l2, h2))
+            elif FLT.match(t):
+                dec = len(t.split(".")[1]); toks[i][k] = f"{float(t) * rng.uniform(0.7, 1.3):.{dec}f}"
+            elif 2 <= len(alpha) <= 6:
+                toks[i][k] = "".join(rng.choice(alpha) for _ in t)
+            else:
+                out = []
+                for ch in t:
+                    if ch.islower(): out.append(rng.choice("abcdefghijklmnopqrstuvwxyz"))
+                    elif ch.isupper(): out.append(rng.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+                    elif ch.isdigit(): out.append(rng.choice("0123456789"))
+                    else: out.append(ch)
+                toks[i][k] = "".join(out)
+    return "\n".join(" ".join(t) for t in toks)
 
 
 def references(cn, pid, real_src):
@@ -103,13 +132,13 @@ def work(args):
     if refs and e0 is None:
         for att in range(MAX_ATT):
             if len(extra) >= WANT: break
-            cand = mutate(I0, rng, 1.0 if att % 2 == 0 else 0.3)
+            cand = mutate(I0, rng, att)
             if cand in seen: continue
             seen.add(cand)
             v = valid(P, refs, cand)
             if v is None: continue
             o, tier, agree, ran = v; diverse = sn(o) not in outs_seen
-            if not diverse and att < 30: continue
+            if not diverse and att < 45: continue
             outs_seen.add(sn(o)); extra.append({"stdin": cand, "expected": o, "tier": tier, "agree": agree, "ran": ran, "diverse": diverse})
     out["extra"] = extra
     inputs = [I0] + [x["stdin"] for x in extra]

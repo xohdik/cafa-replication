@@ -15,3 +15,8 @@ No model output was seen at any step. Revisions used: both allowed after v2.
 - g2_posthoc_outlen.py is POST HOC (written after seeing that G2 accuracy is 8 to 13 percent against 20 to 34 for real programs and that G2 outputs are longer than real ones).
 - g2_posthoc_strata.py is POST HOC. It repeats S, IS, SP and ISP inside two strata defined from expected outputs only (real and G2 both single-token, n = 385; G2 single-token, n = 421). It is reported as a robustness analysis. The pre-registered readings of H1 to H3 are unchanged.
 - g2_rank.py implements H4 as written in PREREG_G2.md, reusing rank_analysis.analyse. It uses the 1,525 G2 programs that all 15 models have scored under real, G1 and G2.
+
+## Revision 4 (2026-10-21)
+- r4_build_inputs.py v1 reached 85.4% of programs with at least one extra input (r4_report_v1.md). A rejection diagnostic (r4_diag.py) showed that the redraw broke input structure (grids, bit strings, index lists). v2 changes only the mutation (range-preserving integers, alphabet-preserving strings, token and line shuffles) and the attempt budget (60). v2 reached 92.4% (r4_report.md). The change was made after a coverage diagnostic and before any model was scored on the inputs.
+- 111 of 1,542 real programs (7.2%) do not reproduce the official CodeNet output on the official input; the paper's oracle is execution of the program, so scores are unaffected.
+- PREREG_R4.md fixes the scoring of conditions 1 and 5 on the extra inputs.

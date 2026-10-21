@@ -3,16 +3,16 @@
 - official CodeNet input found: 1542; equals stdin_cases[0]: 1542
 - real program runs on the official input: 1542; reproduces the official output: 1431
 - reference solutions per problem (0 / 1 / 2 / 3 or more): 49 / 30 / 24 / 1439
-- extra valid inputs per program (0 / 1 / 2): 225 / 65 / 1252
-- accepted inputs by tier: A 2514, B 55; with output different from the official output: 2251 of 2569
+- extra valid inputs per program (0 / 1 / 2): 117 / 49 / 1376
+- accepted inputs by tier: A 2735, B 66; with output different from the official output: 2531 of 2801
 
 ## Real conditions against condition 1 (programs with the condition's code changed from condition 1; 'first only' = passes the official input but differs or fails on an extra input)
 
 | condition | changed | equal on every available input | equal on first input only | differs or errors on the official input | programs with >= 1 extra input |
 |---|---|---|---|---|---|
-| 3 (shuffle) | 542 | 542 | 0 | 0 | 452 |
-| 5 (obfuscation) | 1542 | 1542 | 0 | 0 | 1317 |
-| 7 (both) | 1542 | 1542 | 0 | 0 | 1317 |
+| 3 (shuffle) | 542 | 542 | 0 | 0 | 501 |
+| 5 (obfuscation) | 1542 | 1542 | 0 | 0 | 1425 |
+| 7 (both) | 1542 | 1542 | 0 | 0 | 1425 |
 
 - programs where at least one real condition fails on an extra input: 0
 
