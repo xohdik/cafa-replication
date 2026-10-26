@@ -3,7 +3,7 @@
 Replication package for *Controlled Attribution by Factorial Analysis (CAFA): Execution-Verified Perturbations of Identifiers,
 Statement Order and Program Source in Code-Model Evaluation* (Babatunde, Wang, Chen, Wang; submitted to ACM TOSEM).
 
-Archive: [10.5281/zenodo.23332043](https://doi.org/10.5281/zenodo.23332043) (Zenodo, version 1.0.0).
+Archive: [10.5281/zenodo.23332043](https://doi.org/10.5281/zenodo.23332043) (Zenodo, version 1.0.0, main stage). Release v1.1.0 adds the second-generator (G2) and multi-input (R4) analyses; its DOI is on the same Zenodo record, under "Versions".
 
 CAFA scores a code model on the same programs under every combination of three execution-verified interventions, a full 2^3
 factorial, and reports signed effects with program-level bootstrap intervals:
@@ -23,14 +23,15 @@ base models in the pre-registered ranking study.
 ## What is in the repository
 
 The layout is flat on purpose: the scripts import one another and read their inputs from the working directory, so run everything from
-the repository root. The files fall into five groups.
+the repository root. The files fall into six groups.
 
 | Group | Files |
 |---|---|
 | Design and construction | `design_matrix.py`, `orchestrator.py`, `identifier_rename.py` (I), `ast_shuffle.py` (A), `synthesize.py`, `synthesize_shape.py` (S), `make_confirmation_pairs.py`, `join_codenet_tests.py`, `join_codenet_dates.py`, `convert_emse_to_rq4.py`, `audit_manifest.py`, `check_synth_pairing*.py`, `verify_x*_pool.py` |
 | Scoring | `scoring_harness.py` (main harness), `cafa_revision.py` (reruns that save prediction text, wrong-answer taxonomy, Q8 check), `no_program_control.py`, `complete_case.py`, `convert_checkpoint.py`, `relabel_ids.py` |
 | Analysis | `paired_effects.py`, `interaction_effects.py`, `cell_means.py`, `cafa_shares.py`, `sobol_anova.py`, `compare_models.py`, `ast_subset_effects.py`, `format_confound.py`, `output_strata.py`, `matched_output_effect.py`, `selftest_listing1.py` |
-| Pre-registered follow-ups | `PREREG_*.md`, `make_variants.py`, `variants_analysis.py`, `demo8.py`, `rank_models.json`, `make_rank_queue.py`, `rank_analysis.py`, `gguf_tool.py`, `fetch_rank_models.sh`, `name_ablation*.py`, `run_*.sh` |
+| Pre-registered follow-ups | `PREREG_*.md`, `make_variants.py`, `variants_analysis.py`, `demo8.py`, `rank_models.json`, `make_rank_queue.py`, `rank_analysis.py`, `gguf_tool.py`, `fetch_rank_models.sh`, `name_ablation*.py`, `run_*.sh` |
+| Second generator and multi-input check | `PREREG_G2.md`, `PREREG_R4.md`, `DEVIATIONS.md`, `g2_*.py`, `r4_*.py`, `run_g2.sh`, `run_r4.sh`, `manifest_g2.json`, `r4_inputs.json`, `g2_out/`, `r4_out/`, `audit_*`, `g1_balance.*`, `g2_balance_v*.md` |
 | Development history | `x1_cutoff.py`, `transpile.py`, `stubs.py`, `measure_x4_feasibility.py`, `diagnose_*.py`, `patch_*.py`, `demo3.py`-`demo7.py`, `RESEARCH_PLAN.md`: kept for the record (two candidate factors were measured and withdrawn before the design was fixed; the paper's design section tells the story); not needed to reproduce a result |
 
 Data and outputs sit next to the scripts: `manifest_*.json` (the built conditions), `responses_*.json` and `rerun_*.jsonl` (per-cell model
@@ -82,6 +83,13 @@ The per-cell model outputs are raw generations, and a base model can reproduce t
 that one model (Yi-Coder-9B, `rank_out/Yi_Coder_9B_none.jsonl`) reproduced in this way were replaced by `REDACTED_EMAIL` before
 publication; the commits after the three registration commits were rewritten once for this. No score reads that text, and the
 three registration commits are unchanged.
+
+## Second generator (G2) and multi-input check (R4), release v1.1.0
+
+Both analyses were added after the main study. Their rules were written to `PREREG_G2.md` and `PREREG_R4.md` and committed before any model scored the data they govern (commits in the table above; they became public with release v1.1.0, so their dates are self-recorded). Departures from the plans are listed in `DEVIATIONS.md`.
+
+- **G2**: an independently written generator (`g2_*.py`; its own matcher and three naming vocabularies) that fills conditions 2, 4, 6 and 8. Files: `manifest_g2.json` (1,526 programs), the balance and audit reports (`g2_balance_v*.md`, `audit_*`), per-cell outputs in `g2_out/`, results in `g2_results.md`/`.json`, the post hoc output-length analyses (`g2_posthoc_*`) and the 15-model rank comparison (`g2_rank.*`).
+- **R4**: extra inputs for the real programs, built by structure-preserving mutation of the official input and validated against other CodeNet submissions (`r4_build_inputs.py`, `r4_patch_v2.py`, `r4_diag.py`; `r4_inputs.json`, `r4_report.md`), rescoring of conditions 1 and 5 for the five models (`run_r4.sh`, `r4_out/`) and the analysis (`r4_analyze.py`, `r4_results.md`/`.json`). The first input generator (`r4_report_v1.md`) covered 85.4% of programs and was revised before any model scored an input.
 
 ## Reproducing the results
 
@@ -160,7 +168,9 @@ Three analyses were committed to this repository before the runs they govern:
 |---|---|---|
 | Generator variants and answer-8 runs | `PREREG_variants.md` | `bd8e394dac364ac5a584299075f014210f13e04a` (2026-10-12 19:31 +0800) |
 | 15-model ranking study | `PREREG_ranking.md` | `7a5416b6d108fe89955ca485630f06a5e6069673` (2026-10-12 22:07 +0800) |
-| Identifier-group check on the confirmation set | `PREREG_idgroups.md` | `f9ee130c3b40b10fd61ab2def6883d2840f650f8` (2026-10-13 09:13 +0800) |
+| Identifier-group check on the confirmation set | `PREREG_idgroups.md` | `f9ee130c3b40b10fd61ab2def6883d2840f650f8` (2026-10-13 09:13 +0800) |
+| Second generator (G2) | `PREREG_G2.md` | `56d3ef696c2c0dd3bc6617718442c9887f455672` (2026-10-16 14:35 +0800) |
+| Multi-input check (R4) | `PREREG_R4.md` | `11a8d657efbfb8f2df168a72e59ed60f61f73248` (2026-10-21 18:12 +0800) |
 
 `PREREG_confirm.txt` records, with self-written UTC timestamps, the manifest digest and the analysis plan (2026-10-10 10:32:37 UTC, before any model was scored) and, appended later, the complete-case rule (2026-10-11 04:18:18 UTC, after scoring, when the skipped program 671 was found; it depends on missingness only). The file entered the repository after the runs, so no commit precedes them; the timestamps are not independently verifiable. The paper says so.
 
