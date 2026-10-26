@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this package, please cite the paper and this archive."
-title: "CAFA replication package: Controlled Attribution by Factorial Analysis of identifier, statement-order and program-source perturbations in code-model evaluation"
+title: "Replication package for the paper: Controlled Attribution by Factorial Analysis (CAFA): Execution-Verified Perturbations of Identifiers, Statement Order and Program Source in Code-Model Evaluation"
 type: software
 authors:
   - family-names: Babatunde
