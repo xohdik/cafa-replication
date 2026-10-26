@@ -1,0 +1,41 @@
+{
+ "manifest": "manifest_v2.json",
+ "samples_audited": 480,
+ "per_condition": {
+  "1": {
+   "cells": 480
+  },
+  "2": {
+   "cells": 480
+  },
+  "3": {
+   "cells": 480
+  },
+  "4": {
+   "cells": 480
+  },
+  "5": {
+   "cells": 480
+  },
+  "6": {
+   "cells": 480
+  },
+  "7": {
+   "cells": 480
+  },
+  "8": {
+   "cells": 480
+  }
+ },
+ "per_group": {
+  "real": {
+   "samples": 480,
+   "agree": 480
+  },
+  "generator": {
+   "samples": 480,
+   "agree": 480
+  }
+ },
+ "disagreements": []
+}

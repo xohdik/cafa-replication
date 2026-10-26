@@ -1,0 +1,24 @@
+{
+ "gate_A_coverage": 0.9870298313878081,
+ "gate_A_pass": true,
+ "unmatched_attempt_failures": {
+  "miss_cc": 5308,
+  "miss_name_len": 1685,
+  "miss_lines": 1696,
+  "miss_name_single": 1276,
+  "miss_depth": 501,
+  "dead_store": 3,
+  "input_independent": 521
+ },
+ "manifest_sha256": "a8978b7ad107505658e426926e3568345af18f13ebf7ede74adce45edf155c3d",
+ "seed": 20261014,
+ "p_indep": 0.6,
+ "max_attempts": 400,
+ "n": 1542,
+ "status": {
+  "ok_level0": 1422,
+  "ok_level1": 100,
+  "unmatched": 20
+ },
+ "mean_attempts": 28.72697795071336
+}

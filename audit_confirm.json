@@ -1,0 +1,41 @@
+{
+ "manifest": "manifest_confirm.json",
+ "samples_audited": 1542,
+ "per_condition": {
+  "1": {
+   "cells": 1542
+  },
+  "2": {
+   "cells": 1542
+  },
+  "3": {
+   "cells": 1542
+  },
+  "4": {
+   "cells": 1542
+  },
+  "5": {
+   "cells": 1542
+  },
+  "6": {
+   "cells": 1542
+  },
+  "7": {
+   "cells": 1542
+  },
+  "8": {
+   "cells": 1542
+  }
+ },
+ "per_group": {
+  "real": {
+   "samples": 1542,
+   "agree": 1542
+  },
+  "generator": {
+   "samples": 1542,
+   "agree": 1542
+  }
+ },
+ "disagreements": []
+}
