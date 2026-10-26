@@ -13,9 +13,8 @@ authors:
     given-names: Weidong
 license: MIT
 repository-code: "https://github.com/xohdik/cafa-replication"
-doi: 10.5281/zenodo.23332043
-version: "1.0.0"
-date-released: "2026-10-13"
+version: "1.1.0"
+date-released: "2026-10-26"
 keywords:
   - code models
   - benchmark evaluation
